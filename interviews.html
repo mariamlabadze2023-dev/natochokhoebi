@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Interviews</title>
+    <link rel="stylesheet" href="style.css">
+
+    <div class="music-wave">
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+</head>
+
+<body>
+
+<button onclick="toggleDarkMode()" class="dark-btn">🌙 Dark Mode</button>
+
+<header>
+    <div class="main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="second.html">Concert List</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="music.html">Music & Videos</a></li>
+            <li><a href="interviews.html">Interviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<h1 class="page-title">Interviews</h1>
+
+<!-- SEARCH -->
+<input type="text" id="searchInput" placeholder="Search interviews..." class="search-bar">
+
+<!-- FILTER -->
+<div class="filter-box">
+    <button onclick="showAll()" class="filter-btn">All</button>
+    <button onclick="showFavs()" class="filter-btn">❤ Favorites</button>
+</div>
+
+<div class="interviews">
+
+    <a class="interview-card" data-title="სხვა რაკურსში სტუმრად" href="https://youtu.be/JcCb45v1n_M" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/JcCb45v1n_M/hqdefault.jpg">
+        <h2>სხვა რაკურსში - სტუმრად</h2>
+    </a>
+
+    <a class="interview-card" data-title="ჩვენს ოჯახში" href="https://youtu.be/6z-4SkGLFgY" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/6z-4SkGLFgY/hqdefault.jpg">
+        <h2>ჩვენს ოჯახში</h2>
+    </a>
+
+    <a class="interview-card" data-title="შაქრით თუ უშაქროდ" href="https://youtu.be/A5KBjVjjtfw" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/A5KBjVjjtfw/hqdefault.jpg">
+        <h2>შაქრით თუ უშაქროდ</h2>
+    </a>
+
+    <a class="interview-card" data-title="მომხიბლავი ხუთშაბათი" href="https://youtu.be/ugUIZq17xFs" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/ugUIZq17xFs/hqdefault.jpg">
+        <h2>მომხიბლავი ხუთშაბათი</h2>
+    </a>
+
+    <a class="interview-card" data-title="ავტოგრაფი" href="https://youtu.be/FQaevHqHQYM" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/FQaevHqHQYM/hqdefault.jpg">
+        <h2>ავტოგრაფი</h2>
+    </a>
+
+    <a class="interview-card" data-title="With Noe" href="https://youtu.be/sxZom4bbCrk" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/sxZom4bbCrk/hqdefault.jpg">
+        <h2>#WithNoe</h2>
+    </a>
+
+    <a class="interview-card" data-title="მელორამა" href="https://youtu.be/-yTudzseJIc" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/-yTudzseJIc/hqdefault.jpg">
+        <h2>მელორამა</h2>
+    </a>
+
+    <a class="interview-card" data-title="სხვა კითხვები" href="https://youtu.be/GsHbDQgKbzM" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/GsHbDQgKbzM/hqdefault.jpg">
+        <h2>სხვა კითხვები</h2>
+    </a>
+
+    <a class="interview-card" data-title="სიცრუის დეტექტორი" href="https://youtu.be/m0Wz4nW3oZs" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/m0Wz4nW3oZs/hqdefault.jpg">
+        <h2>სიცრუის დეტექტორი</h2>
+    </a>
+
+    <a class="interview-card" data-title="შუა ქალაქში" href="https://youtu.be/5QV-9_5wSOo" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/5QV-9_5wSOo/hqdefault.jpg">
+        <h2>შუა ქალაქში</h2>
+    </a>
+
+    <a class="interview-card" data-title="ახალი წელი" href="https://youtu.be/WK_V-o0l_Fw" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/WK_V-o0l_Fw/hqdefault.jpg">
+        <h2>ახალი წელი</h2>
+    </a>
+
+    <a class="interview-card" data-title="სიყვარულის ისტორია" href="https://youtu.be/SJb6H33yh7U" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/SJb6H33yh7U/hqdefault.jpg">
+        <h2>სიყვარულის ისტორია</h2>
+    </a>
+
+    <a class="interview-card" data-title="ფარული კონვერტი" href="https://youtu.be/3OuwujxLeow" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/3OuwujxLeow/hqdefault.jpg">
+        <h2>ფარული კონვერტი</h2>
+    </a>
+
+    <a class="interview-card" data-title="ღამის შოუ" href="https://youtu.be/BY1M4UWeVxM" target="_blank">
+        <span class="fav">❤</span>
+        <img src="https://img.youtube.com/vi/BY1M4UWeVxM/hqdefault.jpg">
+        <h2>ღამის შოუ</h2>
+    </a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

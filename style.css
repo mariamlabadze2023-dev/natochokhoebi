@@ -1,0 +1,2184 @@
+
+
+body{
+    background-color: white;
+    font-family: Arial;
+}
+
+/* MENU */
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+
+    padding: 25px 50px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+ul li a:hover{
+    color: crimson;
+}
+
+/* HERO SECTION */
+
+.hero{
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero h1{
+    font-size: 65px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+
+    background-color: crimson;
+
+    padding: 14px 30px;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: white;
+}
+
+
+header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+
+    padding: 25px 50px;
+    margin: 0; /* ეს აუცილებელია */
+}
+
+.hero-image{
+    width: 700px;
+    display: block;
+    margin: 120px auto 0 auto; /* 👈 ეს გაზარდე */
+    
+    border-radius: 25px;
+    border: 6px solid white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+}
+
+
+.concerts{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* თითო ბარათი */
+.concert-card{
+    width: 260px; /* 👈 პატარა გავხადეთ */
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* hover ეფექტი */
+.concert-card:hover{
+    transform: translateY(-8px);
+}
+
+/* სურათი */
+.concert-card img{
+    width: 100%;
+    height: 160px;      /* 👈 ზომა დავაპატარავეთ */
+    object-fit: cover;  /* 👈 რომ არ გაიწელოს */
+    border-radius: 12px;
+    border: 3px solid crimson; /* 👈 ჩარჩო */
+    margin-bottom: 10px;
+}
+
+/* სათაური */
+.concert-card h2{
+    font-size: 18px;
+    margin: 10px 0;
+    color: black;
+}
+
+/* ტექსტი */
+.concert-card p{
+    font-size: 14px;
+    color: gray;
+    margin: 5px 0;
+}
+
+/* გვერდის სათაური */
+.page-title{
+    text-align: center;
+    margin-top: 120px;
+    font-size: 45px;
+    color: black;
+}
+
+.tickets{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.ticket-card{
+    width: 280px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.ticket-card:hover{
+    transform: scale(1.05);
+}
+
+.ticket-card h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ticket-card p{
+    font-size: 15px;
+    color: gray;
+    margin: 5px 0;
+}
+
+.buy-btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.buy-btn:hover{
+    background-color: black;
+}
+
+.tickets{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.ticket-card{
+    width: 260px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.ticket-card:hover{
+    transform: translateY(-8px);
+}
+
+.ticket-card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid crimson;
+    margin-bottom: 10px;
+}
+
+.ticket-card h2{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.ticket-card p{
+    font-size: 14px;
+    color: gray;
+    margin: 5px 0;
+}
+
+.price{
+    font-weight: bold;
+    color: black;
+    margin-top: 5px;
+}
+
+.buy-btn{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.buy-btn:hover{
+    background-color: black;
+}
+
+.contact{
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.contact-image{
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+
+    border: 5px solid crimson;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.contact h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact p{
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 25px;
+}
+
+/* სოციალური ლინკების კონტეინერი */
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* საერთო ღილაკის სტილი */
+.social-links a{
+    text-decoration: none;
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+/* Facebook ღილაკი */
+.fb{
+    background-color: #1877F2;
+}
+
+/* Instagram ღილაკი */
+.ig{
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+}
+
+/* hover ეფექტი */
+.social-links a:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px){
+
+    /* მენიუ ქვევით ჩამოვა და ცენტრში დალაგდება */
+    ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        padding: 15px 0;
+    }
+
+    /* მთავარი კონტეინერი */
+    .main{
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* hero ტექსტი პატარა ეკრანზე */
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+    /* ფოტო პატარა ეკრანზე */
+    .hero-image{
+        width: 90%;
+    }
+
+    /* კონცერტების ბარათები ერთ სვეტად */
+    .concerts,
+    .tickets{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ბარათები */
+    .concert-card,
+    .ticket-card{
+        width: 90%;
+    }
+
+    /* contact ფოტო */
+    .contact-image{
+        width: 80%;
+        height: auto;
+    }
+}
+
+.concert-card, .ticket-card{
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+body{
+    background: #f7f7f7;
+}
+
+.concert-card:hover,
+.ticket-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.hero h1{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body{
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    font-family: Arial;
+}
+ 
+ .concert-card,
+.ticket-card{
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.concert-card:hower
+.ticket-card:hover{
+    transform: translateY(-10px);
+    transition: 0.3s;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1, h2{
+    letter-spacing: 1px;
+}
+
+p{
+    line-height: 1.6;
+}
+
+.btn, .buy-btn{
+    box-shadow: 0 5px 15px rgba(220,20,60,0.3);
+}
+
+.btn:hover, .buy-btn:hover{
+    transform: scale(1.05);
+}
+
+img{
+    border-radius: 15px;
+}
+
+.dark-btn{
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* DARK MODE */
+body.dark{
+    background: #121212;
+    color: white;
+}
+
+body.dark header{
+    background: rgba(0,0,0,0.8);
+}
+
+body.dark .concert-card,
+body.dark .ticket-card,
+body.dark .contact{
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark p{
+    color: #ccc;
+}
+
+body.dark ul li a{
+    color: white;
+} 
+body.dark{
+    background: #121212;
+    color: white;
+}
+
+body.dark header{
+    background: rgba(0,0,0,0.8);
+}
+
+body.dark ul li a{
+    color: white;
+}
+
+body.dark .concert-card,
+body.dark .ticket-card,
+body.dark .contact{
+    background: #1e1e1e;
+    color: white;
+}
+
+@media (max-width: 768px){
+
+    body{
+        padding: 10px;
+    }
+
+    .hero-image{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .hero{
+        margin-top: 40px;
+        padding: 10px;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+
+    .hero p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .concerts,
+    .tickets{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .concert-card,
+    .ticket-card{
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px){
+
+    .contact-image{
+        width: 90%;
+        height: auto;
+    }
+
+    .social-links{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px){
+
+    ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    ul li a{
+        font-size: 16px;
+    }
+}
+
+.status{
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* მწვანე - ხელმისაწვდომი */
+.available{
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* წითელი - გაყიდულია */
+.soldout{
+    background-color: #e74c3c;
+    color: white;
+}
+body.dark{
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+body.dark header{
+    background: rgba(0,0,0,0.9);
+}
+
+body.dark .concert-card,
+body.dark .ticket-card,
+body.dark .contact{
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark ul li a{
+    color: white;
+}
+
+.concert-card,
+.ticket-card{
+    transition: 0.3s;
+}
+
+.concert-card:hover,
+.ticket-card:hover{
+    transform: translateY(-10px);
+}
+
+.btn:hover,
+.buy-btn:hover{
+    box-shadow: 0 0 20px crimson;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: gray;
+}
+
+.concert-card img,
+.ticket-card img{
+    transition: 0.3s;
+}
+
+.concert-card img:hover,
+.ticket-card img:hover{
+    transform: scale(1.05);
+}
+
+/* PAGE TITLE */
+
+.page-title{
+    text-align: center;
+
+    font-size: 55px;
+
+    margin-top: 40px;
+
+    margin-bottom: 30px;
+}
+
+
+/* VIDEOS SECTION */
+
+.videos{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+    padding: 30px;
+}
+
+
+/* VIDEO CARDS */
+
+.video-card{
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.video-card:hover{
+    transform: translateY(-10px);
+}
+
+
+/* VIDEOS */
+
+.video-card iframe{
+    width: 100%;
+
+    height: 220px;
+
+    border: none;
+
+    border-radius: 18px;
+}
+
+
+/* TITLES */
+
+.video-card h2{
+    margin-top: 15px;
+
+    font-size: 24px;
+}
+
+
+/* DARK MODE */
+
+body.dark .video-card{
+    background: #1e1e1e;
+
+    color: white;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 1000px){
+
+    .videos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media(max-width: 700px){
+
+    .videos{
+        grid-template-columns: 1fr;
+    }
+
+    .page-title{
+        font-size: 40px;
+    }
+
+}
+
+.video-card iframe{
+    width: 100%;
+    height: 220px;
+    border: none;
+    border-radius: 15px;
+    background: black;
+}
+
+
+.videos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+
+.video-card{
+    text-decoration: none;
+    color: black;
+
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+
+    display: block;
+}
+
+.video-card:hover{
+    transform: translateY(-10px);
+}
+
+.video-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.video-card h2{
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* DARK MODE */
+
+body.dark .video-card{
+    background: #1e1e1e;
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+    .videos{
+        grid-template-columns: 1fr;
+    }
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+/* NAVBAR */
+.main ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.main ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.main ul li a:hover{
+    color: crimson;
+}
+
+/* TITLE */
+.page-title{
+    text-align: center;
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+/* GRID */
+.videos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+/* CARD */
+.video-card{
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.video-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* THUMBNAIL */
+.video-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.video-card h2{
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* DARK MODE */
+body.dark{
+    background: #121212;
+    color: white;
+}
+
+body.dark .main ul{
+    background: #1e1e1e;
+}
+
+body.dark .video-card{
+    background: #1e1e1e;
+    color: white;
+}
+
+/* DARK MODE BUTTON */
+.dark-btn{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    background: crimson;
+    color: white;
+
+    z-index: 1000;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .videos{
+        grid-template-columns: 1fr;
+    }
+
+    .main ul{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .page-title{
+        font-size: 28px;
+    }
+}
+
+.page-title{
+    margin-top: 90px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+.main ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;   /* აქ აკონტროლებს დაშორებას */
+    padding: 20px;
+    margin: 0;
+}
+
+.main ul li{
+    margin: 0;
+}
+
+.main ul{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+body.dark{
+    background: #0f0f0f;
+    color: #f1f1f1;
+}
+
+body.dark .main ul{
+    background: #1c1c1c;
+}
+
+body.dark .video-card{
+    background: #1c1c1c;
+}
+.search-bar {
+    display: block;
+    margin: 0 auto 25px auto;
+
+    width: 300px;
+    padding: 12px 15px;
+
+    border-radius: 12px;
+    border: 1px solid #ccc;
+
+    outline: none;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.search-bar:focus {
+    border-color: crimson;
+    box-shadow: 0 0 10px rgba(220,20,60,0.3);
+}
+
+/* dark mode */
+body.dark .search-bar {
+    background: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+}
+
+.video-card {
+    position: relative;
+}
+
+.video-card img {
+    transition: 0.3s;
+}
+
+.video-card:hover img {
+    transform: scale(1.05);
+}
+
+/* პატარა play overlay */
+.video-card::after {
+    content: "▶";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.video-card:hover::after {
+    opacity: 1;
+}
+
+.fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: rgba(0,0,0,0.5);
+    color: white;
+
+    padding: 6px 8px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fav:hover {
+    background: crimson;
+    transform: scale(1.2);
+}
+
+.video-card {
+    backdrop-filter: blur(5px);
+}
+
+body {
+    transition: 0.3s;
+}
+
+.video-box {
+    position: relative;
+}
+
+.fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.fav:hover {
+    background: crimson;
+    transform: scale(1.2);
+}
+
+.video-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.video-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.img-box{
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+/* ფოტო zoom */
+.img-box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* hover zoom */
+.video-card:hover .img-box img{
+    transform: scale(1.08);
+}
+
+/* გული */
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    z-index: 5;
+    cursor: pointer;
+}
+
+/* hover-ზე გული ცოტათი გაბრწყინდეს */
+.fav:hover{
+    background: crimson;
+}
+
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    cursor: pointer;
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+.fav.active{
+    background: crimson;
+    transform: scale(1.2);
+}
+
+.img-box{
+    position: relative;
+    overflow: hidden;
+}
+
+    // DARK MODE (თუ უკვე გაქვს, დატოვე)
+function toggleDarkMode(){
+    document.body.classList.toggle("dark");
+    localStorage.setItem("dark", document.body.classList.contains("dark"));
+}
+
+window.onload = function(){
+
+    if(localStorage.getItem("dark") === "true"){
+        document.body.classList.add("dark");
+    }
+
+    // SEARCH FUNCTION
+    const searchInput = document.getElementById("searchInput");
+
+    if(searchInput){
+        searchInput.addEventListener("input", function(){
+            let value = this.value.toLowerCase();
+            let videos = document.querySelectorAll(".video-card");
+
+            videos.forEach(video => {
+                let title = video.querySelector("h2").innerText.toLowerCase();
+
+                if(title.includes(value)){
+                    video.style.display = "block";
+                } else {
+                    video.style.display = "none";
+                }
+            });
+        });
+    }
+
+    // FAVORITES
+    let favs = JSON.parse(localStorage.getItem("favs")) || [];
+
+    document.querySelectorAll(".fav").forEach((heart, index) => {
+
+        // თუ უკვე favorite-ია
+        if(favs.includes(index)){
+            heart.classList.add("active");
+        }
+
+        heart.addEventListener("click", function(e){
+            e.preventDefault();
+
+            this.classList.toggle("active");
+
+            if(this.classList.contains("active")){
+                favs.push(index);
+            } else {
+                favs = favs.filter(i => i !== index);
+            }
+
+            localStorage.setItem("favs", JSON.stringify(favs));
+        });
+    });
+
+};
+
+.search-bar{
+    display: block;
+    margin: 20px auto;
+    padding: 12px 18px;
+    width: 300px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search-bar:focus{
+    border-color: crimson;
+    box-shadow: 0 0 10px rgba(220,20,60,0.3);
+}
+
+/* FAVORITE HEART */
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    color: white;
+    text-shadow: 0 0 5px black;
+
+    transition: 0.3s;
+}
+
+.fav.active{
+    color: crimson;
+    transform: scale(1.3);
+}
+
+/* CARD FIX */
+.video-card{
+    position: relative;
+}
+
+/* FEATURED VIDEO */
+.featured-video{
+    width: 80%;
+    margin: 120px auto 40px auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.featured-video iframe{
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+.featured-text{
+    padding: 15px;
+    text-align: center;
+}
+
+.featured-text h2{
+    margin: 10px 0;
+}
+
+.featured-text p{
+    color: gray;
+}
+
+/* SEARCH BAR */
+.search-bar{
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* FAVORITE HEART */
+.video-card{
+    position: relative;
+}
+
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.fav:hover{
+    background: crimson;
+    color: white;
+}
+
+/* DARK MODE FIX */
+body.dark .featured-video{
+    background: #1e1e1e;
+}
+
+
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    color: white;
+    background: rgba(0,0,0,0.4);
+
+    padding: 6px 8px;
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.video-card{
+    position: relative;
+}
+
+.fav.active{
+    color: red;
+    background: rgba(255,255,255,0.9);
+    transform: scale(1.2);
+}
+
+.search-bar{
+    display: block;
+    margin: 20px auto;
+    padding: 12px 15px;
+
+    width: 300px;
+    max-width: 90%;
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+
+.interviews{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.interview-card{
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.interview-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.interview-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.interview-card h2{
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+}
+
+body.dark .interview-card{
+    background: #1c1c1c;
+    color: white;
+}
+
+@media(max-width: 900px){
+    .interviews{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 120px;
+    padding: 40px;
+}
+
+.hero h1{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 25px;
+}
+
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn.secondary{
+    background: white;
+    border: 2px solid crimson;
+    color: crimson;
+}
+
+.btn.secondary:hover{
+    background: crimson;
+    color: white;
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.feature-card{
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature-card:hover{
+    transform: translateY(-8px);
+}
+
+.feature-card h2{
+    font-size: 20px;
+}
+
+.feature-card p{
+    font-size: 14px;
+    color: gray;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    padding: 20px;
+}
+
+.hero-box{
+    max-width: 600px;
+    text-align: center;
+
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero-box h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-box p{
+    font-size: 18px;
+    color: gray;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.feature-card{
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature-card:hover{
+    transform: translateY(-8px);
+}
+
+/* DARK MODE */
+body.dark .hero-box,
+body.dark .feature-card{
+    background: #1e1e1e;
+    color: white;
+}
+
+/* ANIMATION BASE */
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* stagger effect */
+.hero-box{
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.feature-card{
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* hover glow buttons */
+.btn:hover{
+    box-shadow: 0 0 20px crimson;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* hover glow */
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px crimson;
+    transition: 0.3s;
+}
+
+.search-bar{
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    width: 60%;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.video-card{
+    position: relative;
+}
+
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    color: white;
+    text-shadow: 0 0 5px black;
+    transition: 0.3s;
+}
+
+.fav:hover{
+    transform: scale(1.3);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    color: #111;
+}
+
+.video-card,
+.concert-card,
+.ticket-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.video-card:hover,
+.concert-card:hover,
+.ticket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.video-card img,
+.concert-card img,
+.ticket-card img {
+    transition: 0.4s;
+}
+
+.video-card:hover img,
+.concert-card:hover img,
+.ticket-card:hover img {
+    transform: scale(1.08);
+}
+
+.search-bar {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    width: 300px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-bar:focus {
+    width: 350px;
+    border-color: crimson;
+}
+
+body.dark {
+    background: #0f0f0f;
+    color: #f1f1f1;
+}
+
+body.dark header {
+    background: rgba(20,20,20,0.8);
+}
+
+body.dark .video-card,
+body.dark .concert-card,
+body.dark .ticket-card {
+    background: #1c1c1c;
+    color: white;
+}
+
+.video-card,
+.interview-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* animated gradient background */
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        #ffdde1,
+        #ee9ca7,
+        #c2e9fb,
+        #a1c4fd
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+
+    z-index: -2;
+}
+
+/* blur overlay (რომ ლამაზად დაიფაროს) */
+body::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.4);
+    z-index: -1;
+}
+
+/* animation */
+@keyframes gradientMove{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+
+/* PARTICLES CONTAINER */
+.particles{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* PARTICLE */
+.particles span{
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background: crimson;
+    border-radius: 50%;
+    opacity: 0.4;
+
+    animation: floatUp 12s linear infinite;
+}
+
+/* სხვადასხვა პოზიციები */
+.particles span:nth-child(1){left: 10%; animation-duration: 8s;}
+.particles span:nth-child(2){left: 20%; animation-duration: 10s;}
+.particles span:nth-child(3){left: 30%; animation-duration: 7s;}
+.particles span:nth-child(4){left: 40%; animation-duration: 12s;}
+.particles span:nth-child(5){left: 50%; animation-duration: 9s;}
+.particles span:nth-child(6){left: 60%; animation-duration: 11s;}
+.particles span:nth-child(7){left: 70%; animation-duration: 8s;}
+.particles span:nth-child(8){left: 80%; animation-duration: 13s;}
+
+/* animation */
+@keyframes floatUp{
+    0%{
+        bottom: -50px;
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(30px);
+    }
+    100%{
+        bottom: 110%;
+        transform: translateX(-30px);
+    }
+}
+
+.music-wave{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 80px;
+    gap: 6px;
+
+    margin: 20px 0;
+}
+
+/* bars */
+.music-wave span{
+    width: 6px;
+    height: 20px;
+
+    background: crimson;
+    border-radius: 10px;
+
+    animation: wave 1s infinite ease-in-out;
+}
+
+/* სხვადასხვა delay რომ “მუსიკის” ეფექტი იყოს */
+.music-wave span:nth-child(1){animation-delay: 0s;}
+.music-wave span:nth-child(2){animation-delay: 0.1s;}
+.music-wave span:nth-child(3){animation-delay: 0.2s;}
+.music-wave span:nth-child(4){animation-delay: 0.3s;}
+.music-wave span:nth-child(5){animation-delay: 0.4s;}
+
+@keyframes wave{
+    0%, 100%{
+        height: 15px;
+    }
+    50%{
+        height: 60px;
+    }
+}
+
+body.dark .music-wave span{
+    background: white;
+}
+
+body.dark .particles span{
+    background: white;
+    opacity: 0.2;
+}
+
+body.dark::after{
+    background: rgba(0,0,0,0.6);
+}
+
+.video-card img{
+    transition: 0.5s;
+}
+
+/* hover effect - spinning + zoom */
+.video-card:hover img{
+    transform: scale(1.08) rotate(5deg);
+}
+
+/* disc glow effect */
+.video-card:hover{
+    box-shadow: 0 0 25px rgba(220,20,60,0.4);
+}
+
+.video-card{
+    position: relative;
+}
+
+/* spinning glow ring */
+.video-card::before{
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 120px;
+    height: 120px;
+
+    border: 3px solid crimson;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.video-card:hover::before{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.fav-filter{
+    display: block;
+    margin: 10px auto;
+
+    padding: 10px 15px;
+    border: none;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    background: crimson;
+    color: white;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.fav-filter:hover{
+    transform: scale(1.05);
+}
+
+.interviews{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.interview-card{
+    position: relative;
+
+    display: block;
+    text-decoration: none;
+
+    background: white;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    transition: 0.4s;
+}
+
+.interview-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.interview-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+/* zoom on hover */
+.interview-card:hover img{
+    transform: scale(1.08);
+}
+
+/* title */
+.interview-card h2{
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+}
+
+body.dark .interview-card{
+    background: #1c1c1c;
+    color: white;
+}
+
+body.dark .search-bar{
+    background: #1c1c1c;
+    color: white;
+    border: 1px solid #333;
+}
+
+@media(max-width: 900px){
+    .interviews{
+        grid-template-columns: 1fr;
+    }
+}
+
+.interview-card{
+    position: relative;
+}
+
+.fav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    cursor: pointer;
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+.fav:hover{
+    background: crimson;
+    transform: scale(1.2);
+}
+
+.fav.active{
+    background: crimson;
+    transform: scale(1.2);
+}
+
+.filter-box{
+    text-align:center;
+    margin:20px 0;
+}
+
+.filter-btn{
+    padding:10px 15px;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:crimson;
+    color:white;
+}
+
+.filter-btn:hover{
+    transform:scale(1.05);
+}
+
+.fav{
+    position:absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+    font-size:20px;
+    color:white;
+    background:rgba(0,0,0,0.5);
+    padding:5px 8px;
+    border-radius:50%;
+    transition:0.3s;
+}
+
+.fav.active{
+    background:crimson;
+}
+
+.ticket-card.ended {
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+.status.ended {
+    background: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.buy-btn.disabled {
+    pointer-events: none;
+    background: #777;
+    color: white;
+    cursor: not-allowed;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+    transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+    background: #555;
+}
+
+
+.filter-buttons button.active {
+    background: #00bcd4;
+    color: black;
+    font-weight: bold;
+}
+
+// =====================
+// 🎧 MUSIC WAVE ANIMATION (PRO)
+// =====================
+
+.music-wave {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    height: 40px;
+    margin: 20px 0;
+}
+
+.music-wave span {
+    width: 5px;
+    height: 10px;
+    background: #ff4da6;
+    border-radius: 5px;
+    animation: wave 1s infinite ease-in-out;
+}
+
+/* სხვადასხვა delay რომ “ცოცხალი” იყოს */
+.music-wave span:nth-child(1) { animation-delay: 0s; }
+.music-wave span:nth-child(2) { animation-delay: 0.1s; }
+.music-wave span:nth-child(3) { animation-delay: 0.2s; }
+.music-wave span:nth-child(4) { animation-delay: 0.3s; }
+.music-wave span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes wave {
+    0%, 100% {
+        height: 10px;
+        opacity: 0.6;
+    }
+    50% {
+        height: 40px;
+        opacity: 1;
+    }
+}
+
+
