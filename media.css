@@ -1,0 +1,828 @@
+/* =========================================
+   📱 MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    /* GENERAL */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* HEADER */
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .main ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+
+    /* PAGE TITLE */
+
+    .page-title {
+        font-size: 36px;
+        margin: 35px 20px;
+        text-align: center;
+    }
+
+
+    /* CONCERTS */
+
+    .concerts {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+
+    /* TICKETS */
+
+    .tickets {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+
+    /* INTERVIEWS */
+
+    .interviews {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+
+    /* CARDS */
+
+    .concert-card,
+    .ticket-card,
+    .interview-card {
+        max-width: 100%;
+    }
+
+
+    /* IMAGES */
+
+    .concert-card img,
+    .ticket-card img,
+    .interview-card img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    /* SEARCH */
+
+    .search-bar {
+        width: 80%;
+        max-width: 600px;
+    }
+
+
+    /* FILTERS */
+
+    .filter-buttons,
+    .filter-box {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+}
+
+
+
+/* =========================================
+   📱 MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+
+    /* =====================================
+       GENERAL
+       ===================================== */
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    body {
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================
+       HEADER / NAVIGATION
+       ===================================== */
+
+    header {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+
+    .main {
+        width: 100%;
+    }
+
+
+    .main ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        gap: 10px;
+
+        padding: 10px 0;
+        margin: 0;
+    }
+
+
+    .main ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .main ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 8px 10px;
+
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================
+       DARK MODE BUTTON
+       ===================================== */
+
+    .dark-btn {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        display: block;
+
+        margin: 10px auto;
+
+        font-size: 13px;
+
+        padding: 8px 14px;
+    }
+
+
+
+    /* =====================================
+       MUSIC WAVE
+       ===================================== */
+
+    .music-wave {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+
+
+    /* =====================================
+       PAGE TITLE
+       ===================================== */
+
+    .page-title {
+        width: 90%;
+
+        margin: 30px auto 25px;
+
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        text-align: center;
+
+        word-wrap: break-word;
+    }
+
+
+
+    /* =====================================
+       HOME / HERO
+       ===================================== */
+
+    .hero,
+    .hero-section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .hero img,
+    .hero-section img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .hero h1,
+    .hero-section h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+
+    .hero p,
+    .hero-section p {
+        font-size: 15px;
+        line-height: 1.6;
+
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+    /* =====================================
+       CONCERT LIST
+       ===================================== */
+
+    .concerts {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        width: 90%;
+
+        margin: 25px auto;
+
+        gap: 25px;
+    }
+
+
+    .concert-card {
+        width: 100%;
+
+        padding: 15px;
+
+        overflow: hidden;
+    }
+
+
+    .concert-card img {
+        display: block;
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: 350px;
+
+        object-fit: cover;
+    }
+
+
+    .concert-card h2 {
+        font-size: 22px;
+
+        line-height: 1.3;
+
+        word-wrap: break-word;
+    }
+
+
+    .concert-card p {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        word-wrap: break-word;
+    }
+
+
+
+    /* =====================================
+       TICKETS
+       ===================================== */
+
+    .tickets {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        width: 90%;
+
+        margin: 25px auto;
+
+        gap: 25px;
+    }
+
+
+    .ticket-card {
+        width: 100%;
+
+        padding: 15px;
+
+        overflow: hidden;
+    }
+
+
+    .ticket-card img {
+        display: block;
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: 350px;
+
+        object-fit: cover;
+    }
+
+
+    .ticket-card h2 {
+        font-size: 21px;
+
+        line-height: 1.3;
+
+        word-wrap: break-word;
+    }
+
+
+    .ticket-card p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .ticket-card .price {
+        font-size: 16px;
+    }
+
+
+
+    /* =====================================
+       TICKET FILTER BUTTONS
+       ===================================== */
+
+    .filter-buttons {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        align-items: center;
+
+        width: 90%;
+
+        margin: 20px auto;
+
+        gap: 10px;
+    }
+
+
+    .filter-buttons button {
+        min-width: 90px;
+
+        padding: 10px 15px;
+
+        font-size: 14px;
+    }
+
+
+
+    /* =====================================
+       INTERVIEWS
+       ===================================== */
+
+    .interviews {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        width: 90%;
+
+        margin: 25px auto;
+
+        gap: 25px;
+    }
+
+
+    .interview-card {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    .interview-card img {
+        display: block;
+
+        width: 100%;
+
+        height: auto;
+
+        object-fit: cover;
+    }
+
+
+    .interview-card h2 {
+        font-size: 20px;
+
+        line-height: 1.3;
+
+        word-wrap: break-word;
+    }
+
+
+    .interview-card .fav {
+        font-size: 22px;
+    }
+
+
+
+    /* =====================================
+       SEARCH
+       ===================================== */
+
+    .search-bar {
+        display: block;
+
+        width: 90%;
+
+        max-width: none;
+
+        margin: 20px auto;
+
+        padding: 12px 15px;
+
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================
+       INTERVIEW FILTER
+       ===================================== */
+
+    .filter-box {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        align-items: center;
+
+        width: 90%;
+
+        margin: 20px auto;
+
+        gap: 10px;
+    }
+
+
+    .filter-box button {
+        padding: 10px 15px;
+
+        font-size: 14px;
+    }
+
+
+
+    /* =====================================
+       BUY BUTTON
+       ===================================== */
+
+    .buy-btn {
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 12px 15px;
+
+        margin-top: 15px;
+    }
+
+
+
+    /* =====================================
+       MUSIC & VIDEOS
+       ===================================== */
+
+    .video-card {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    .video-card iframe,
+    .video-card video {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .video-card img {
+        width: 100%;
+
+        height: auto;
+    }
+
+
+
+    /* =====================================
+       CONTACT FORM
+       ===================================== */
+
+    .contact-form,
+    form {
+        width: 90%;
+
+        max-width: 600px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select,
+
+    form input,
+    form textarea,
+    form select {
+        width: 100%;
+
+        max-width: 100%;
+
+        font-size: 15px;
+
+        padding: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    .contact-form textarea,
+    form textarea {
+        min-height: 130px;
+
+        resize: vertical;
+    }
+
+
+    .contact-form button,
+    form button {
+        width: 100%;
+
+        padding: 12px;
+
+        font-size: 15px;
+    }
+
+
+
+    /* =====================================
+       ADMIN PANEL
+       ===================================== */
+
+    .admin-panel {
+        width: 90%;
+
+        margin: 30px auto;
+    }
+
+
+    .concert-form {
+        width: 100%;
+    }
+
+
+    .concert-form input,
+    .concert-form select {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    .form-buttons {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .form-buttons button {
+        width: 100%;
+    }
+
+
+    .admin-concerts {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+
+    /* =====================================
+       FOOTER
+       ===================================== */
+
+    footer {
+        width: 100%;
+
+        padding: 25px 15px;
+
+        text-align: center;
+    }
+
+
+    footer p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+
+    /* =====================================
+       PARTICLES
+       ===================================== */
+
+    .particles {
+        max-width: 100%;
+
+        overflow: hidden;
+
+        pointer-events: none;
+    }
+
+}
+
+
+
+/* =========================================
+   📱 SMALL PHONES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+
+    /* HEADER */
+
+    header {
+        padding: 10px 8px;
+    }
+
+
+    .main ul {
+        gap: 6px;
+    }
+
+
+    .main ul li a {
+        font-size: 14px;
+
+        padding: 7px;
+    }
+
+
+
+    /* TITLE */
+
+    .page-title {
+        font-size: 26px;
+
+        margin-top: 25px;
+
+        margin-bottom: 20px;
+    }
+
+
+
+    /* CARDS */
+
+    .concerts,
+    .tickets,
+    .interviews {
+        width: 94%;
+
+        gap: 20px;
+    }
+
+
+    .concert-card,
+    .ticket-card,
+    .interview-card {
+        padding: 12px;
+    }
+
+
+    .concert-card h2,
+    .ticket-card h2,
+    .interview-card h2 {
+        font-size: 19px;
+    }
+
+
+    .concert-card p,
+    .ticket-card p {
+        font-size: 13px;
+    }
+
+
+
+    /* FILTERS */
+
+    .filter-buttons button,
+    .filter-box button {
+        font-size: 13px;
+
+        padding: 9px 12px;
+    }
+
+
+
+    /* SEARCH */
+
+    .search-bar {
+        width: 94%;
+
+        font-size: 14px;
+    }
+
+
+
+    /* DARK BUTTON */
+
+    .dark-btn {
+        font-size: 12px;
+
+        padding: 7px 11px;
+    }
+
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 10px;
+    }
+
+
+    footer p {
+        font-size: 12px;
+    }
+
+}
