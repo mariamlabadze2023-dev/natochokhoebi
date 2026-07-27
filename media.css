@@ -816,3 +816,14 @@
     }
 
 }
+@media (max-width: 768px) {
+
+    /* Hide old menu elements */
+    header > .burger,
+    .main > .menu-btn,
+    .main > .menu-toggle,
+    .main > .menu-icon {
+        display: none !important;
+    }
+
+}

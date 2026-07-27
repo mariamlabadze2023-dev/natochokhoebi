@@ -13,14 +13,10 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-
     font-family: Arial, sans-serif;
-
     background: #f5f5f5;
     color: #111;
-
     overflow-x: hidden;
-
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -31,11 +27,9 @@ body {
 
 body::before {
     content: "";
-
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
 
@@ -48,31 +42,25 @@ body::before {
     );
 
     background-size: 300% 300%;
-
     animation: gradientMove 12s ease infinite;
-
     z-index: -3;
 }
 
 body::after {
     content: "";
-
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
 
     background: rgba(255, 255, 255, 0.55);
 
     z-index: -2;
-
     pointer-events: none;
 }
 
 @keyframes gradientMove {
-
     0% {
         background-position: 0% 50%;
     }
@@ -84,7 +72,6 @@ body::after {
     100% {
         background-position: 0% 50%;
     }
-
 }
 
 
@@ -94,17 +81,13 @@ body::after {
 
 .particles {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
 
     overflow: hidden;
-
     z-index: -1;
-
     pointer-events: none;
 }
 
@@ -115,9 +98,7 @@ body::after {
     height: 10px;
 
     background: crimson;
-
     border-radius: 50%;
-
     opacity: 0.4;
 
     animation: floatUp 12s linear infinite;
@@ -164,7 +145,6 @@ body::after {
 }
 
 @keyframes floatUp {
-
     0% {
         bottom: -50px;
         transform: translateX(0);
@@ -178,7 +158,6 @@ body::after {
         bottom: 110%;
         transform: translateX(-30px);
     }
-
 }
 
 
@@ -188,14 +167,11 @@ body::after {
 
 .music-wave {
     display: flex;
-
     justify-content: center;
     align-items: flex-end;
-
     gap: 5px;
 
     height: 50px;
-
     margin: 15px 0;
 }
 
@@ -204,7 +180,6 @@ body::after {
     height: 10px;
 
     background: crimson;
-
     border-radius: 10px;
 
     animation: wave 1s infinite ease-in-out;
@@ -231,7 +206,6 @@ body::after {
 }
 
 @keyframes wave {
-
     0%,
     100% {
         height: 10px;
@@ -242,7 +216,6 @@ body::after {
         height: 40px;
         opacity: 1;
     }
-
 }
 
 
@@ -252,34 +225,25 @@ body::after {
 
 header {
     position: sticky;
-
     top: 0;
-
     width: 100%;
-
     z-index: 1000;
 
     background: rgba(255, 255, 255, 0.9);
-
     backdrop-filter: blur(10px);
 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .main ul {
-    list-style: none;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 22px;
 
+    list-style: none;
     padding: 18px 20px;
-
     margin: 0;
 }
 
@@ -289,11 +253,8 @@ header {
 
 .main ul li a {
     text-decoration: none;
-
     color: #111;
-
     font-size: 17px;
-
     transition: 0.3s;
 }
 
@@ -308,20 +269,17 @@ header {
 
 .dark-btn {
     position: fixed;
-
     top: 15px;
     right: 15px;
 
     padding: 10px 15px;
 
     border: none;
-
     border-radius: 10px;
 
     cursor: pointer;
 
     background: crimson;
-
     color: white;
 
     font-size: 14px;
@@ -333,7 +291,6 @@ header {
 
 .dark-btn:hover {
     transform: scale(1.05);
-
     box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
 }
 
@@ -359,22 +316,20 @@ header {
 
 .hero {
     display: flex;
-
     justify-content: center;
 
     margin-top: 60px;
-
     padding: 30px 20px;
 }
 
 .hero-box {
     max-width: 650px;
 
+    padding: 40px;
+
     text-align: center;
 
     background: rgba(255, 255, 255, 0.85);
-
-    padding: 40px;
 
     border-radius: 25px;
 
@@ -384,33 +339,28 @@ header {
 }
 
 .hero-box h1 {
-    font-size: 55px;
-
     margin: 0 0 15px;
 
-    letter-spacing: 2px;
+    font-size: 55px;
 
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .hero-box p {
+    margin-bottom: 20px;
+
     font-size: 18px;
-
-    color: #666;
-
     line-height: 1.6;
 
-    margin-bottom: 20px;
+    color: #666;
 }
 
 .hero-buttons {
     display: flex;
-
     justify-content: center;
-
-    gap: 15px;
-
     flex-wrap: wrap;
+    gap: 15px;
 
     margin-top: 25px;
 }
@@ -424,14 +374,12 @@ header {
     display: block;
 
     width: 700px;
-
     max-width: 90%;
 
     margin: 30px auto;
 
-    border-radius: 25px;
-
     border: 5px solid white;
+    border-radius: 25px;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
@@ -450,17 +398,15 @@ header {
 .btn {
     display: inline-block;
 
-    text-decoration: none;
-
     padding: 12px 24px;
 
     border-radius: 12px;
 
     background: crimson;
-
     color: white;
 
     font-size: 16px;
+    text-decoration: none;
 
     transition: 0.3s;
 }
@@ -481,7 +427,6 @@ header {
 
 .btn.secondary:hover {
     background: crimson;
-
     color: white;
 }
 
@@ -492,15 +437,11 @@ header {
 
 .features {
     display: flex;
-
     justify-content: center;
-
+    flex-wrap: wrap;
     gap: 25px;
 
-    flex-wrap: wrap;
-
     margin: 50px auto;
-
     padding: 20px;
 }
 
@@ -533,11 +474,10 @@ header {
 }
 
 .feature-card p {
-    color: #666;
-
-    line-height: 1.6;
-
     margin-bottom: 20px;
+
+    color: #666;
+    line-height: 1.6;
 }
 
 
@@ -547,12 +487,9 @@ header {
 
 .concerts {
     display: flex;
-
     justify-content: center;
-
-    gap: 25px;
-
     flex-wrap: wrap;
+    gap: 25px;
 
     padding: 20px;
 }
@@ -583,14 +520,12 @@ header {
 
 .concert-card img {
     width: 100%;
-
     height: 160px;
 
     object-fit: cover;
 
-    border-radius: 14px;
-
     border: 3px solid crimson;
+    border-radius: 14px;
 
     transition: 0.4s;
 }
@@ -600,17 +535,16 @@ header {
 }
 
 .concert-card h2 {
-    font-size: 18px;
-
     margin: 12px 0;
+
+    font-size: 18px;
 }
 
 .concert-card p {
-    font-size: 14px;
-
-    color: #666;
-
     margin: 6px 0;
+
+    font-size: 14px;
+    color: #666;
 }
 
 
@@ -620,12 +554,9 @@ header {
 
 .tickets {
     display: flex;
-
     justify-content: center;
-
-    gap: 25px;
-
     flex-wrap: wrap;
+    gap: 25px;
 
     padding: 20px;
 }
@@ -654,52 +585,47 @@ header {
 
 .ticket-card img {
     width: 100%;
-
     height: 160px;
 
     object-fit: cover;
 
-    border-radius: 14px;
-
     border: 3px solid crimson;
+    border-radius: 14px;
 }
 
 .ticket-card h2 {
-    font-size: 18px;
-
     margin: 12px 0;
+
+    font-size: 18px;
 }
 
 .ticket-card p {
-    font-size: 14px;
-
-    color: #666;
-
     margin: 6px 0;
+
+    font-size: 14px;
+    color: #666;
 }
 
 .price {
+    margin-top: 10px;
+
     font-weight: bold;
 
     color: #111 !important;
-
-    margin-top: 10px;
 }
 
 .buy-btn {
     display: inline-block;
 
     margin-top: 12px;
-
     padding: 10px 20px;
 
     background: crimson;
-
     color: white;
 
-    text-decoration: none;
-
     border-radius: 10px;
+
+    text-decoration: none;
 
     transition: 0.3s;
 }
@@ -711,37 +637,34 @@ header {
 }
 
 
-/* ENDED TICKETS */
+/* ========================================
+   ENDED TICKETS
+======================================== */
 
 .ticket-card.ended {
     opacity: 0.6;
-
     filter: grayscale(100%);
 }
 
 .status {
     display: inline-block;
 
+    margin-bottom: 10px;
     padding: 5px 12px;
 
     border-radius: 20px;
 
     font-size: 12px;
-
     font-weight: bold;
-
-    margin-bottom: 10px;
 }
 
 .status.available {
     background: #2ecc71;
-
     color: white;
 }
 
 .status.ended {
     background: #777;
-
     color: white;
 }
 
@@ -749,41 +672,36 @@ header {
     pointer-events: none;
 
     background: #777;
-
     color: white;
 }
 
 
-/* TICKET FILTERS */
+/* ========================================
+   TICKET FILTERS
+======================================== */
 
 .filter-buttons {
-    text-align: center;
-
     margin-bottom: 20px;
+
+    text-align: center;
 }
 
 .filter-buttons button {
+    margin: 5px;
     padding: 10px 18px;
 
-    margin: 5px;
-
     border: none;
-
     border-radius: 10px;
 
     cursor: pointer;
 
     background: #222;
-
     color: white;
 
     transition: 0.3s;
 }
 
-.filter-buttons button:hover {
-    background: crimson;
-}
-
+.filter-buttons button:hover,
 .filter-buttons button.active {
     background: crimson;
 }
@@ -795,9 +713,7 @@ header {
 
 .videos {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
 
     padding: 30px;
@@ -808,15 +724,14 @@ header {
 
     display: block;
 
-    text-decoration: none;
-
-    color: #111;
+    overflow: hidden;
 
     background: white;
+    color: #111;
 
     border-radius: 20px;
 
-    overflow: hidden;
+    text-decoration: none;
 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 
@@ -833,7 +748,6 @@ header {
     display: block;
 
     width: 100%;
-
     height: 200px;
 
     object-fit: cover;
@@ -846,13 +760,12 @@ header {
 }
 
 .video-card h2 {
+    margin: 0;
+    padding: 15px;
+
     font-size: 17px;
 
     text-align: center;
-
-    padding: 15px;
-
-    margin: 0;
 }
 
 
@@ -866,13 +779,14 @@ header {
     top: 10px;
     right: 10px;
 
-    width: 34px;
-    height: 34px;
+    z-index: 10;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
+
+    width: 34px;
+    height: 34px;
 
     background: rgba(0, 0, 0, 0.6);
 
@@ -882,43 +796,28 @@ header {
 
     cursor: pointer;
 
-    z-index: 10;
-
     transition: 0.3s;
 }
 
-.fav:hover {
-    background: crimson;
-
-    transform: scale(1.15);
-}
-
+.fav:hover,
 .fav.active {
     background: crimson;
 
-    color: white;
-
     transform: scale(1.15);
 }
-
-
-/* FAVORITES FILTER */
 
 .fav-filter {
     display: block;
 
     margin: 10px auto 25px;
-
     padding: 10px 18px;
 
     border: none;
-
     border-radius: 20px;
 
     cursor: pointer;
 
     background: crimson;
-
     color: white;
 
     transition: 0.3s;
@@ -937,16 +836,13 @@ header {
     display: block;
 
     width: 300px;
-
     max-width: 90%;
 
+    margin: 20px auto;
     padding: 12px 18px;
 
-    margin: 20px auto;
-
-    border-radius: 30px;
-
     border: 1px solid #ccc;
+    border-radius: 30px;
 
     outline: none;
 
@@ -968,9 +864,7 @@ header {
 
 .interviews {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
 
     padding: 30px;
@@ -981,15 +875,14 @@ header {
 
     display: block;
 
-    text-decoration: none;
-
-    color: #111;
+    overflow: hidden;
 
     background: white;
+    color: #111;
 
     border-radius: 20px;
 
-    overflow: hidden;
+    text-decoration: none;
 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 
@@ -1006,7 +899,6 @@ header {
     display: block;
 
     width: 100%;
-
     height: 200px;
 
     object-fit: cover;
@@ -1019,37 +911,35 @@ header {
 }
 
 .interview-card h2 {
+    margin: 0;
+    padding: 15px;
+
     font-size: 16px;
 
     text-align: center;
-
-    padding: 15px;
-
-    margin: 0;
 }
 
 
-/* INTERVIEW FILTER */
+/* ========================================
+   INTERVIEW FILTER
+======================================== */
 
 .filter-box {
-    text-align: center;
-
     margin: 20px 0;
+
+    text-align: center;
 }
 
 .filter-btn {
+    margin: 5px;
     padding: 10px 18px;
 
-    margin: 5px;
-
     border: none;
-
     border-radius: 10px;
 
     cursor: pointer;
 
     background: crimson;
-
     color: white;
 
     transition: 0.3s;
@@ -1065,13 +955,12 @@ header {
 ======================================== */
 
 .contact {
-    text-align: center;
-
     max-width: 800px;
 
     margin: 60px auto;
-
     padding: 30px 20px;
+
+    text-align: center;
 
     background: rgba(255, 255, 255, 0.8);
 
@@ -1084,54 +973,47 @@ header {
     display: block;
 
     width: 320px;
-
     max-width: 90%;
-
     height: 320px;
-
-    object-fit: cover;
 
     margin: 0 auto 25px;
 
-    border-radius: 20px;
+    object-fit: cover;
 
     border: 5px solid crimson;
+    border-radius: 20px;
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .contact h1 {
-    font-size: 40px;
-
     margin-bottom: 10px;
+
+    font-size: 40px;
 }
 
 .contact p {
-    font-size: 18px;
-
-    color: #666;
-
     margin-bottom: 25px;
+
+    font-size: 18px;
+    color: #666;
 }
 
 .social-links {
     display: flex;
-
     justify-content: center;
-
-    gap: 15px;
-
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .social-links a {
-    text-decoration: none;
+    padding: 12px 18px;
 
     color: white;
 
-    padding: 12px 18px;
-
     border-radius: 12px;
+
+    text-decoration: none;
 
     transition: 0.3s;
 }
@@ -1155,15 +1037,359 @@ header {
 
 
 /* ========================================
+   FAN MESSAGE FORM
+======================================== */
+
+.fan-message {
+    max-width: 600px;
+
+    margin: 50px auto 20px;
+    padding: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.fan-message h2 {
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+.fan-message p {
+    margin-bottom: 25px;
+
+    color: gray;
+}
+
+#fanForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#fanForm input,
+#fanForm textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+#fanForm textarea {
+    resize: vertical;
+}
+
+#fanForm input:focus,
+#fanForm textarea:focus {
+    border-color: crimson;
+
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.2);
+}
+
+.send-message-btn {
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: crimson;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.send-message-btn:hover {
+    background: #b00020;
+
+    transform: scale(1.03);
+
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.4);
+}
+
+.send-message-btn:disabled {
+    opacity: 0.7;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+#formMessage {
+    display: none;
+
+    margin-top: 20px;
+
+    color: #2ecc71;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   ADMIN PANEL
+======================================== */
+
+.admin-panel {
+    max-width: 1000px;
+
+    margin: 100px auto 50px;
+    padding: 20px;
+}
+
+.admin-subtitle {
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: gray;
+}
+
+
+/* ADMIN FORM */
+
+.concert-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    max-width: 600px;
+
+    margin: 0 auto 50px;
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.concert-form h2 {
+    margin-bottom: 10px;
+
+    text-align: center;
+}
+
+.concert-form input,
+.concert-form select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.concert-form input:focus,
+.concert-form select:focus {
+    border-color: crimson;
+
+    box-shadow: 0 0 8px rgba(220, 20, 60, 0.2);
+}
+
+
+/* ADMIN FORM BUTTONS */
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.admin-submit,
+.cancel-btn {
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.admin-submit {
+    background: crimson;
+    color: white;
+}
+
+.admin-submit:hover {
+    background: #a00020;
+
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: #777;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #555;
+}
+
+
+/* ADMIN MESSAGE */
+
+.admin-message {
+    min-height: 20px;
+
+    text-align: center;
+
+    color: crimson;
+
+    font-weight: bold;
+}
+
+
+/* ADMIN CONCERT LIST */
+
+.admin-list-title {
+    margin: 40px 0 25px;
+
+    font-size: 30px;
+
+    text-align: center;
+}
+
+.admin-concerts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-concert-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.admin-concert-card img {
+    width: 150px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.admin-concert-info {
+    flex: 1;
+}
+
+.admin-concert-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.admin-concert-info p {
+    margin: 5px 0;
+
+    color: gray;
+}
+
+.admin-status {
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 5px 10px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.admin-status.available {
+    background: #2ecc71;
+    color: white;
+}
+
+.admin-status.ended {
+    background: #777;
+    color: white;
+}
+
+.admin-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 9px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #3498db;
+}
+
+.delete-btn {
+    background: #e74c3c;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
    FOOTER
 ======================================== */
 
 footer {
-    text-align: center;
-
+    margin-top: 50px;
     padding: 25px;
 
-    margin-top: 50px;
+    text-align: center;
 
     color: #666;
 }
@@ -1174,19 +1400,15 @@ footer {
 ======================================== */
 
 @keyframes fadeIn {
-
     from {
         opacity: 0;
-
         transform: translateY(20px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
-
 }
 
 
@@ -1196,7 +1418,6 @@ footer {
 
 body.dark {
     background: #0f0f0f;
-
     color: #f1f1f1;
 }
 
@@ -1222,9 +1443,11 @@ body.dark .concert-card,
 body.dark .ticket-card,
 body.dark .video-card,
 body.dark .interview-card,
-body.dark .contact {
+body.dark .contact,
+body.dark .fan-message,
+body.dark .concert-form,
+body.dark .admin-concert-card {
     background: #1c1c1c;
-
     color: white;
 }
 
@@ -1232,7 +1455,8 @@ body.dark .hero-box p,
 body.dark .feature-card p,
 body.dark .concert-card p,
 body.dark .ticket-card p,
-body.dark .contact p {
+body.dark .contact p,
+body.dark .fan-message p {
     color: #ccc;
 }
 
@@ -1243,21 +1467,17 @@ body.dark .interview-card {
 
 body.dark .search-bar {
     background: #1c1c1c;
-
     color: white;
-
     border-color: #444;
 }
 
 body.dark .btn.secondary {
     background: #1c1c1c;
-
     color: #ff4d6d;
 }
 
 body.dark .btn.secondary:hover {
     background: crimson;
-
     color: white;
 }
 
@@ -1271,8 +1491,26 @@ body.dark .music-wave span {
 
 body.dark .particles span {
     background: white;
-
     opacity: 0.2;
+}
+
+body.dark #fanForm input,
+body.dark #fanForm textarea {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+body.dark #fanForm input::placeholder,
+body.dark #fanForm textarea::placeholder {
+    color: #aaa;
+}
+
+body.dark .concert-form input,
+body.dark .concert-form select {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444;
 }
 
 
@@ -1281,12 +1519,10 @@ body.dark .particles span {
 ======================================== */
 
 @media (max-width: 1000px) {
-
     .videos,
     .interviews {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
@@ -1294,7 +1530,6 @@ body.dark .particles span {
 
     .dark-btn {
         top: 10px;
-
         right: 10px;
 
         padding: 8px 12px;
@@ -1302,24 +1537,11 @@ body.dark .particles span {
         font-size: 12px;
     }
 
-
-    .main ul {
-        gap: 12px;
-
-        padding: 15px 10px;
-    }
-
-    .main ul li a {
-        font-size: 15px;
-    }
-
-
     .page-title {
-        font-size: 35px;
-
         margin-top: 45px;
-    }
 
+        font-size: 35px;
+    }
 
     .hero {
         margin-top: 30px;
@@ -1339,28 +1561,23 @@ body.dark .particles span {
         font-size: 16px;
     }
 
-
     .hero-image {
         width: 90%;
 
         margin-top: 20px;
     }
 
-
     .concerts,
     .tickets {
         flex-direction: column;
-
         align-items: center;
     }
 
     .concert-card,
     .ticket-card {
         width: 90%;
-
         max-width: 350px;
     }
-
 
     .videos,
     .interviews {
@@ -1369,12 +1586,10 @@ body.dark .particles span {
         padding: 20px;
     }
 
-
     .video-card img,
     .interview-card img {
         height: 220px;
     }
-
 
     .contact {
         width: 90%;
@@ -1388,50 +1603,73 @@ body.dark .particles span {
 
     .contact-image {
         width: 90%;
-
         height: auto;
     }
 
-
     .social-links {
         flex-direction: column;
-
         align-items: center;
     }
 
     .social-links a {
         width: 90%;
-
         max-width: 300px;
     }
 
+    .fan-message {
+        width: 90%;
+
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    .fan-message h2 {
+        font-size: 24px;
+    }
+
+    #fanForm input,
+    #fanForm textarea {
+        font-size: 15px;
+    }
+
+    .admin-panel {
+        margin-top: 80px;
+        padding: 10px;
+    }
+
+    .concert-form {
+        padding: 20px;
+    }
+
+    .admin-concert-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .admin-concert-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .admin-actions {
+        flex-direction: row;
+    }
 }
 
 
 @media (max-width: 500px) {
 
-    .main ul {
-        gap: 8px;
-    }
-
-    .main ul li a {
-        font-size: 13px;
-    }
-
-
     .page-title {
         font-size: 30px;
     }
-
 
     .hero-box h1 {
         font-size: 32px;
     }
 
-
     .hero-buttons {
         flex-direction: column;
-
         align-items: center;
     }
 
@@ -1439,752 +1677,21 @@ body.dark .particles span {
         width: 90%;
     }
 
-
     .search-bar {
         width: 85%;
     }
 
-}
-
-/* =========================
-FAN MESSAGE FORM
-========================= */
-
-.fan-message{
-max-width: 600px;
-margin: 50px auto 20px auto;
-padding: 30px;
-
-```
-background: white;
-border-radius: 20px;
-
-box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-
-text-align: center;
-```
-
-}
-
-.fan-message h2{
-font-size: 28px;
-margin-bottom: 10px;
-}
-
-.fan-message p{
-color: gray;
-margin-bottom: 25px;
-}
-
-/* FORM */
-
-#fanForm{
-display: flex;
-flex-direction: column;
-gap: 15px;
-}
-
-#fanForm input,
-#fanForm textarea{
-width: 100%;
-box-sizing: border-box;
-
-```
-padding: 14px 16px;
-
-border: 1px solid #ccc;
-border-radius: 12px;
-
-font-family: Arial, sans-serif;
-font-size: 16px;
-
-outline: none;
-
-transition: 0.3s;
-```
-
-}
-
-#fanForm textarea{
-resize: vertical;
-}
-
-#fanForm input:focus,
-#fanForm textarea:focus{
-border-color: crimson;
-
-```
-box-shadow:
-    0 0 10px rgba(220,20,60,0.2);
-```
-
-}
-
-/* SEND BUTTON */
-
-.send-message-btn{
-padding: 14px 25px;
-
-```
-border: none;
-border-radius: 12px;
-
-background: crimson;
-color: white;
-
-font-size: 16px;
-font-weight: bold;
-
-cursor: pointer;
-
-transition: 0.3s;
-```
-
-}
-
-.send-message-btn:hover{
-background: #b00020;
-
-```
-transform: scale(1.03);
-
-box-shadow:
-    0 0 20px rgba(220,20,60,0.4);
-```
-
-}
-
-/* SUCCESS MESSAGE */
-
-#formMessage{
-margin-top: 20px;
-
-```
-color: #2ecc71;
-
-font-weight: bold;
-
-display: none;
-```
-
-}
-
-/* DARK MODE */
-
-body.dark .fan-message{
-background: #1e1e1e;
-color: white;
-}
-
-body.dark #fanForm input,
-body.dark #fanForm textarea{
-background: #2a2a2a;
-color: white;
-
-```
-border-color: #444;
-```
-
-}
-
-body.dark #fanForm input::placeholder,
-body.dark #fanForm textarea::placeholder{
-color: #aaa;
-}
-
-/* MOBILE */
-
-@media(max-width: 768px){
-
-```
-.fan-message{
-    width: 90%;
-    box-sizing: border-box;
-
-    padding: 20px;
-
-    margin-top: 40px;
-}
-
-.fan-message h2{
-    font-size: 24px;
-}
-
-#fanForm input,
-#fanForm textarea{
-    font-size: 15px;
-}
-```
-
-}
-
-/* =========================
-FAN MESSAGE FORM
-========================= */
-
-.fan-message{
-max-width: 600px;
-margin: 50px auto 20px auto;
-padding: 30px;
-
-```
-background: white;
-border-radius: 20px;
-
-box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-
-text-align: center;
-```
-
-}
-
-.fan-message h2{
-font-size: 28px;
-margin-bottom: 10px;
-}
-
-.fan-message p{
-color: gray;
-margin-bottom: 25px;
-}
-
-/* FORM */
-
-#fanForm{
-display: flex;
-flex-direction: column;
-gap: 15px;
-}
-
-#fanForm input,
-#fanForm textarea{
-width: 100%;
-box-sizing: border-box;
-
-```
-padding: 14px 16px;
-
-border: 1px solid #ccc;
-border-radius: 12px;
-
-font-family: Arial, sans-serif;
-font-size: 16px;
-
-outline: none;
-
-transition: 0.3s;
-```
-
-}
-
-#fanForm textarea{
-resize: vertical;
-}
-
-#fanForm input:focus,
-#fanForm textarea:focus{
-border-color: crimson;
-
-```
-box-shadow:
-    0 0 10px rgba(220,20,60,0.2);
-```
-
-}
-
-/* SEND BUTTON */
-
-.send-message-btn{
-padding: 14px 25px;
-
-```
-border: none;
-border-radius: 12px;
-
-background: crimson;
-color: white;
-
-font-size: 16px;
-font-weight: bold;
-
-cursor: pointer;
-
-transition: 0.3s;
-```
-
-}
-
-.send-message-btn:hover{
-background: #b00020;
-
-```
-transform: scale(1.03);
-
-box-shadow:
-    0 0 20px rgba(220,20,60,0.4);
-```
-
-}
-
-.send-message-btn:disabled{
-opacity: 0.7;
-cursor: wait;
-transform: none;
-}
-
-/* SUCCESS MESSAGE */
-
-#formMessage{
-margin-top: 20px;
-
-```
-color: #2ecc71;
-
-font-weight: bold;
-
-display: none;
-```
-
-}
-
-/* DARK MODE */
-
-body.dark .fan-message{
-background: #1e1e1e;
-color: white;
-}
-
-body.dark #fanForm input,
-body.dark #fanForm textarea{
-background: #2a2a2a;
-color: white;
-
-```
-border-color: #444;
-```
-
-}
-
-body.dark #fanForm input::placeholder,
-body.dark #fanForm textarea::placeholder{
-color: #aaa;
-}
-
-/* MOBILE */
-
-@media(max-width: 768px){
-
-```
-.fan-message{
-    width: 90%;
-    box-sizing: border-box;
-
-    padding: 20px;
-
-    margin-top: 40px;
-}
-
-.fan-message h2{
-    font-size: 24px;
-}
-
-#fanForm input,
-#fanForm textarea{
-    font-size: 15px;
-}
-```
-
-}
-
-/* ==========================================
-   ADMIN PANEL
-========================================== */
-
-.admin-panel{
-    max-width: 1000px;
-    margin: 100px auto 50px auto;
-    padding: 20px;
-}
-
-.admin-subtitle{
-    text-align: center;
-    color: gray;
-    margin-bottom: 30px;
-}
-
-
-/* FORM */
-
-.concert-form{
-    max-width: 600px;
-    margin: 0 auto 50px auto;
-    padding: 30px;
-
-    background: white;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.12);
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.concert-form h2{
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-
-.concert-form input,
-.concert-form select{
-
-    width: 100%;
-
-    box-sizing: border-box;
-
-    padding: 13px 15px;
-
-    border-radius: 10px;
-
-    border: 1px solid #ccc;
-
-    outline: none;
-
-    font-size: 15px;
-
-    font-family: Arial, sans-serif;
-
-}
-
-
-.concert-form input:focus,
-.concert-form select:focus{
-
-    border-color: crimson;
-
-    box-shadow:
-        0 0 8px rgba(220,20,60,0.2);
-
-}
-
-
-/* FORM BUTTONS */
-
-.form-buttons{
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    margin-top: 10px;
-
-}
-
-
-.admin-submit,
-.cancel-btn{
-
-    border: none;
-
-    padding: 12px 25px;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-size: 15px;
-
-    transition: 0.3s;
-
-}
-
-
-.admin-submit{
-
-    background: crimson;
-
-    color: white;
-
-}
-
-
-.admin-submit:hover{
-
-    background: #a00020;
-
-    transform: scale(1.05);
-
-}
-
-
-.cancel-btn{
-
-    background: #777;
-
-    color: white;
-
-}
-
-
-.cancel-btn:hover{
-
-    background: #555;
-
-}
-
-
-/* MESSAGE */
-
-.admin-message{
-
-    text-align: center;
-
-    color: crimson;
-
-    font-weight: bold;
-
-    min-height: 20px;
-
-}
-
-
-/* CONCERT LIST */
-
-.admin-list-title{
-
-    text-align: center;
-
-    font-size: 30px;
-
-    margin: 40px 0 25px 0;
-
-}
-
-
-.admin-concerts{
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-
-}
-
-
-.admin-concert-card{
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 20px;
-
-    background: white;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.1);
-
-}
-
-
-.admin-concert-card img{
-
-    width: 150px;
-
-    height: 100px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-
-}
-
-
-.admin-concert-info{
-
-    flex: 1;
-
-}
-
-
-.admin-concert-info h3{
-
-    margin-top: 0;
-
-    margin-bottom: 10px;
-
-}
-
-
-.admin-concert-info p{
-
-    margin: 5px 0;
-
-    color: gray;
-
-}
-
-
-.admin-status{
-
-    display: inline-block;
-
-    margin-top: 8px;
-
-    padding: 5px 10px;
-
-    border-radius: 10px;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-}
-
-
-.admin-status.available{
-
-    background: #2ecc71;
-
-    color: white;
-
-}
-
-
-.admin-status.ended{
-
-    background: #777;
-
-    color: white;
-
-}
-
-
-.admin-actions{
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-
-}
-
-
-.edit-btn,
-.delete-btn{
-
-    border: none;
-
-    padding: 9px 15px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    color: white;
-
-}
-
-
-.edit-btn{
-
-    background: #3498db;
-
-}
-
-
-.delete-btn{
-
-    background: #e74c3c;
-
-}
-
-
-.edit-btn:hover,
-.delete-btn:hover{
-
-    transform: scale(1.05);
-
-}
-
-
-/* DARK MODE */
-
-body.dark .concert-form,
-body.dark .admin-concert-card{
-
-    background: #1e1e1e;
-
-    color: white;
-
-}
-
-
-body.dark .concert-form input,
-body.dark .concert-form select{
-
-    background: #2a2a2a;
-
-    color: white;
-
-    border-color: #444;
-
-}
-
-
-/* MOBILE */
-
-@media(max-width: 700px){
-
-    .admin-panel{
-
-        margin-top: 80px;
-
-        padding: 10px;
-
-    }
-
-
-    .concert-form{
-
-        padding: 20px;
-
-    }
-
-
-    .admin-concert-card{
-
+    .form-buttons {
         flex-direction: column;
-
-        text-align: center;
-
     }
 
-
-    .admin-concert-card img{
-
+    .admin-submit,
+    .cancel-btn {
         width: 100%;
-
-        height: 200px;
-
     }
 
-
-    .admin-actions{
-
-        flex-direction: row;
-
+    .admin-actions {
+        width: 100%;
+        flex-direction: column;
     }
-
 }
