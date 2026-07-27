@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="ka">
+
 <head>
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Contact | Nato & Chokhos</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
 <button onclick="toggleDarkMode()" class="dark-btn">🌙 Dark Mode</button>
 
-<div class="music-wave">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+<!-- NAVBAR -->
 
 <header>
     <div class="main">
@@ -30,41 +33,124 @@
     </div>
 </header>
 
-<section class="contact">
+<!-- MUSIC WAVE -->
 
-    <img src="images/cheminato.jpg" class="contact-image">
-
-    <h1>Contact Nato & Chokhos</h1>
-
-    <p>გამოგვყევით სოციალურ ქსელებში!</p>
-
-    <div class="social-links">
-
-        <a href="https://www.facebook.com/share/1RUyMUbko2/?mibextid=wwXIfr" target="_blank" class="fb">Facebook</a>
-        <a href="https://www.facebook.com/share/18yppHsqsi/?mibextid=wwXIfr" target="_blank" class="fb">Facebook</a>
-
-        <a href="https://www.instagram.com/nato_gelashvili_official?igsh=MTJlYjN1bnJlMmpyYQ==" target="_blank" class="ig">Instagram</a>
-        <a href="https://www.instagram.com/chokhos_official?igsh=bHMxMHV4dXYzMm9u" target="_blank" class="ig">Instagram</a>
-
-    </div>
-
-</section>
-
-<footer>
-    <p>© 2026 Nato & Chokhos Concerts</p>
-</footer>
-
-<script src="script.js"></script>
-
-<div class="particles">
-    <span></span>
-    <span></span>
-    <span></span>
+<div class="music-wave">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
 </div>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact">
+
+```
+<img src="images/cheminato.jpg"
+     class="contact-image"
+     alt="Nato & Chokhos">
+
+<h1>Contact Nato & Chokhos</h1>
+
+<p>გამოგვყევით სოციალურ ქსელებში!</p>
+
+
+<!-- SOCIAL LINKS -->
+
+<div class="social-links">
+
+    <a href="https://www.facebook.com/share/1RUyMUbko2/?mibextid=wwXIfr"
+       target="_blank"
+       class="fb">
+        Facebook
+    </a>
+
+    <a href="https://www.facebook.com/share/18yppHsqsi/?mibextid=wwXIfr"
+       target="_blank"
+       class="fb">
+        Facebook
+    </a>
+
+    <a href="https://www.instagram.com/nato_gelashvili_official?igsh=MTJlYjN1bnJlMmpyYQ=="
+       target="_blank"
+       class="ig">
+        Instagram
+    </a>
+
+    <a href="https://www.instagram.com/chokhos_official?igsh=bHMxMHV4dXYzMm9u"
+       target="_blank"
+       class="ig">
+        Instagram
+    </a>
+
+</div>
+
+
+<!-- FAN MESSAGE FORM -->
+
+<div class="fan-message">
+
+    <h2>Send Us a Message ❤️</h2>
+
+    <p>
+         გამოგვიგზავნეთ შეტყობინება!
+    </p>
+
+
+    <form id="fanForm"
+          action="https://formspree.io/f/xnjelldz"
+          method="POST">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
+
+        <textarea
+            name="message"
+            placeholder="Write your message..."
+            rows="6"
+            required
+        ></textarea>
+
+        <button type="submit" class="send-message-btn">
+            Send Message ❤️
+        </button>
+
+    </form>
+
+
+    <!-- SUCCESS MESSAGE -->
+
+    <p id="formMessage">
+        Thank you for your message! ❤️
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 Nato & Chokhos Concerts</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
 </body>
 </html>

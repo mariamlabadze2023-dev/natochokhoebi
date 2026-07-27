@@ -1,104 +1,200 @@
 <!DOCTYPE html>
 <html lang="ka">
+
 <head>
     <meta charset="UTF-8">
-    <title>Nato & Chokhos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nato & Chokhos Concerts</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- DARK MODE BUTTON -->
-<button onclick="toggleDarkMode()" class="dark-btn">🌙 Dark Mode</button>
+    <!-- DARK MODE BUTTON -->
+    <button onclick="toggleDarkMode()" class="dark-btn">
+        🌙 Dark Mode
+    </button>
 
-<div class="music-wave">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
 
-<!-- HEADER -->
-<header>
-    <footer>
-     website created for educational purposes.
-</footer>
-    <div class="main">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="second.html">Concert List</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-            <li><a href="music.html">Music & Videos</a></li>
-            <li><a href="interviews.html">Interviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <!-- MUSIC WAVE -->
+    <div class="music-wave">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-</header>
 
 
+    <!-- NAVIGATION -->
+    <header>
+        <div class="main">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
 
-<!-- HERO -->
-<section class="hero">
+                <li>
+                    <a href="second.html">Concert List</a>
+                </li>
 
-    <div class="hero-box fade-in">
+                <li>
+                    <a href="tickets.html">Tickets</a>
+                </li>
 
-        <h1 class="fade-in">Nato & Chokhos</h1>
+                <li>
+                    <a href="music.html">Music & Videos</a>
+                </li>
 
-        <p class="fade-in">
-            ოფიციალური კონცერტების და მუსიკის პლატფორმა 🎤<br>
-            ნახე კონცერტები, ვიდეოები და ინტერვიუები ერთ სივრცეში!
-        </p>
+                <li>
+                    <a href="interviews.html">Interviews</a>
+                </li>
 
-        <div class="hero-buttons fade-in">
-            <a href="tickets.html" class="btn">🎟 Buy Tickets</a>
-            <a href="music.html" class="btn secondary">🎬 Watch Videos</a>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-box">
+
+            <h1>
+                Nato & Chokhos
+            </h1>
+
+            <p>
+                ნატო გელაშვილისა და ჭოხოების ოფიციალური ვებგვერდი
+            </p>
+
+            <p>
+                განრიგები, კონცერტები, მუსიკა, ვიდეოები და ინტერვიუები ერთ სივრცეში!
+            </p>
+
+
+            <!-- HERO BUTTONS -->
+            <div class="hero-buttons">
+
+                <a href="second.html" class="btn">
+                    🎤 Concerts
+                </a>
+
+                <a href="music.html" class="btn secondary">
+                    🎵 Music & Videos
+                </a>
+
+            </div>
+
         </div>
 
+    </section>
+
+
+    <!-- HERO IMAGE -->
+    <img 
+        src="images/cheminato.jpg"
+        alt="Nato & Chokhos"
+        class="hero-image"
+    >
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <!-- CONCERTS -->
+        <div class="feature-card">
+
+            <h2>
+                🎤 Concerts
+            </h2>
+
+            <p>
+                იხილე ნატო & ჭოხოების
+                დაგეგმილი კონცერტები
+                და ღონისძიებები.
+            </p>
+
+            <a href="second.html" class="btn">
+                View Concerts
+            </a>
+
+        </div>
+
+
+        <!-- MUSIC -->
+        <div class="feature-card">
+
+            <h2>
+                🎵 Music & Videos
+            </h2>
+
+            <p>
+                მოუსმინე საყვარელ სიმღერებს
+                და უყურე მუსიკალურ ვიდეოებს.
+            </p>
+
+            <a href="music.html" class="btn">
+                Explore Music
+            </a>
+
+        </div>
+
+
+        <!-- INTERVIEWS -->
+        <div class="feature-card">
+
+            <h2>
+                🎙 Interviews
+            </h2>
+
+            <p>
+                ნახე საინტერესო ინტერვიუები
+                და გადაცემები.
+            </p>
+
+            <a href="interviews.html" class="btn">
+                Watch Interviews
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Nato & Chokhos Concerts
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+
+    <!-- BACKGROUND PARTICLES -->
+    <div class="particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
     </div>
-
-</section>
-
-<!-- IMAGE -->
-<img src="images/natochokhos.jpg" class="hero-image fade-in">
-
-<!-- FEATURES -->
-<section class="features">
-
-    <div class="feature-card fade-in">
-        <h2>🎤 Live Concerts</h2>
-        <p>ყველა კონცერტის ინფორმაცია ერთ ადგილას</p>
-    </div>
-
-    <div class="feature-card fade-in">
-        <h2>🎬 Videos</h2>
-        <p>ცოცხალი შესრულებები და კლიპები</p>
-    </div>
-
-    <div class="feature-card fade-in">
-        <h2>🎟 Tickets</h2>
-        <p>შეიძინე ბილეთები ონლაინ მარტივად</p>
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Nato & Chokhos Concerts</p>
-</footer>
-
-<script src="script.js"></script>
-
-<div class="particles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
 
 </body>
+
 </html>

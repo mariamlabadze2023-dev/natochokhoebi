@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button onclick="toggleDarkMode()" class="dark-btn">
+    🌙 Dark Mode
+</button>
+
+<header>
+    <div class="main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="second.html">Concert List</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="music.html">Music & Videos</a></li>
+            <li><a href="interviews.html">Interviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<section class="admin-panel">
+
+    <h1 class="page-title">Admin Panel</h1>
+
+    <p class="admin-subtitle">
+        Manage Nato & Chokhos concerts
+    </p>
+
+
+    <!-- ADD CONCERT FORM -->
+
+    <form id="concertForm" class="concert-form">
+
+        <h2 id="formTitle">Add New Concert</h2>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Concert name"
+            required
+        >
+
+        <input
+            type="text"
+            id="date"
+            placeholder="Date (e.g. 29 July 2026)"
+            required
+        >
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Location"
+            required
+        >
+
+        <input
+            type="url"
+            id="image"
+            placeholder="Image URL"
+            required
+        >
+
+        <input
+            type="number"
+            id="price"
+            placeholder="Ticket price"
+            min="0"
+            required
+        >
+
+        <select id="status" required>
+
+            <option value="available">
+                Available
+            </option>
+
+            <option value="ended">
+                Ended
+            </option>
+
+        </select>
+
+
+        <div class="form-buttons">
+
+            <button
+                type="submit"
+                class="admin-submit"
+                id="submitButton"
+            >
+                Add Concert
+            </button>
+
+            <button
+                type="button"
+                class="cancel-btn"
+                id="cancelButton"
+                onclick="cancelEdit()"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <p id="message" class="admin-message"></p>
+
+
+    <!-- CONCERT LIST -->
+
+    <h2 class="admin-list-title">
+        Concerts
+    </h2>
+
+    <div id="adminConcerts" class="admin-concerts">
+
+        <p>Loading concerts...</p>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Nato & Chokhos Concerts</p>
+</footer>
+
+
+<script src="script.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>

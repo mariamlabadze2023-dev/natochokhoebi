@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="ka">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Music & Videos</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<button onclick="toggleDarkMode()" class="dark-btn">🌙 Dark Mode</button>
+<button onclick="toggleDarkMode()" class="dark-btn">
+    🌙 Dark Mode
+</button>
+
+
+<!-- MUSIC WAVE -->
 
 <div class="music-wave">
     <span></span>
@@ -18,104 +27,343 @@
     <span></span>
 </div>
 
+
+<!-- NAVIGATION -->
+
 <header>
+
     <div class="main">
+
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="second.html">Concert List</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-            <li><a href="music.html">Music & Videos</a></li>
-            <li><a href="interviews.html">Interviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="second.html">Concert List</a>
+            </li>
+
+            <li>
+                <a href="tickets.html">Tickets</a>
+            </li>
+
+            <li>
+                <a href="music.html">Music & Videos</a>
+            </li>
+
+            <li>
+                <a href="interviews.html">Interviews</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
         </ul>
+
     </div>
+
 </header>
 
-<h1 class="page-title">Music & Videos</h1>
+
+<!-- PAGE TITLE -->
+
+<h1 class="page-title">
+    Music & Videos
+</h1>
+
 
 <!-- SEARCH -->
-<input type="text" id="searchInput" class="search-bar" placeholder="Search videos...">
-<button class="fav-filter" onclick="toggleFavFilter()">❤️ Favorites Only</button>
+
+<input
+    type="text"
+    id="searchInput"
+    class="search-bar"
+    placeholder="Search videos..."
+>
+
+
+<!-- FAVORITES FILTER -->
+
+<button
+    class="fav-filter"
+    id="favFilterBtn"
+    onclick="toggleFavFilter()"
+>
+    ❤️ Favorites Only
+</button>
+
 
 <!-- VIDEOS -->
+
 <div class="videos">
 
-    <a class="video-card" href="https://youtu.be/yLQ_ctFaRhU">
+
+    <!-- VIDEO 1 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/yLQ_ctFaRhU"
+        target="_blank"
+        data-id="yLQ_ctFaRhU"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/yLQ_ctFaRhU/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/yLQ_ctFaRhU/hqdefault.jpg"
+            alt="ჩამჭიდე ხელი"
+        >
+
         <h2>ჩამჭიდე ხელი</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/QbbU2zDbCKQ">
+
+    <!-- VIDEO 2 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/QbbU2zDbCKQ"
+        target="_blank"
+        data-id="QbbU2zDbCKQ"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/QbbU2zDbCKQ/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/QbbU2zDbCKQ/hqdefault.jpg"
+            alt="ჩემო ცისფერთვალება"
+        >
+
         <h2>ჩემო ცისფერთვალება</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/Ly7hHmEh7ms">
+
+    <!-- VIDEO 3 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/Ly7hHmEh7ms"
+        target="_blank"
+        data-id="Ly7hHmEh7ms"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/Ly7hHmEh7ms/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/Ly7hHmEh7ms/hqdefault.jpg"
+            alt="დაგინახე შორიდან"
+        >
+
         <h2>დაგინახე შორიდან</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/3Hp1lNuZBR4">
+
+    <!-- VIDEO 4 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/3Hp1lNuZBR4"
+        target="_blank"
+        data-id="3Hp1lNuZBR4"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/3Hp1lNuZBR4/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/3Hp1lNuZBR4/hqdefault.jpg"
+            alt="შემიყვარდა ერთი ბიჭი"
+        >
+
         <h2>შემიყვარდა ერთი ბიჭი</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/elDa4oHszGg">
+
+    <!-- VIDEO 5 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/elDa4oHszGg"
+        target="_blank"
+        data-id="elDa4oHszGg"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/elDa4oHszGg/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/elDa4oHszGg/hqdefault.jpg"
+            alt="ღვინოს დავლევ"
+        >
+
         <h2>ღვინოს დავლევ</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/RcfcDuCVT4Y">
+
+    <!-- VIDEO 6 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/RcfcDuCVT4Y"
+        target="_blank"
+        data-id="RcfcDuCVT4Y"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/RcfcDuCVT4Y/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/RcfcDuCVT4Y/hqdefault.jpg"
+            alt="აყვავდება როცა ნუში"
+        >
+
         <h2>აყვავდება როცა ნუში</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/g_oaSb1hDiQ">
+
+    <!-- VIDEO 7 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/g_oaSb1hDiQ"
+        target="_blank"
+        data-id="g_oaSb1hDiQ"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/g_oaSb1hDiQ/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/g_oaSb1hDiQ/hqdefault.jpg"
+            alt="Live Concert Hall"
+        >
+
         <h2>Live Concert Hall</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/aRio2kLdo00">
+
+    <!-- VIDEO 8 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/aRio2kLdo00"
+        target="_blank"
+        data-id="aRio2kLdo00"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/aRio2kLdo00/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/aRio2kLdo00/hqdefault.jpg"
+            alt="ვარსკვლავის გახსნა"
+        >
+
         <h2>ვარსკვლავის გახსნა</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/J5O2xJDE3Eg">
+
+    <!-- VIDEO 9 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/J5O2xJDE3Eg"
+        target="_blank"
+        data-id="J5O2xJDE3Eg"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/J5O2xJDE3Eg/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/J5O2xJDE3Eg/hqdefault.jpg"
+            alt="პანკესა"
+        >
+
         <h2>პანკესა</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/xSOhYdmtVa4">
+
+    <!-- VIDEO 10 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/xSOhYdmtVa4"
+        target="_blank"
+        data-id="xSOhYdmtVa4"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/xSOhYdmtVa4/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/xSOhYdmtVa4/hqdefault.jpg"
+            alt="გზა სიარულმა დალია"
+        >
+
         <h2>გზა სიარულმა დალია</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/LErXCiodzAE">
+
+    <!-- VIDEO 11 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/LErXCiodzAE"
+        target="_blank"
+        data-id="LErXCiodzAE"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/LErXCiodzAE/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/LErXCiodzAE/hqdefault.jpg"
+            alt="დეკემბერი"
+        >
+
         <h2>დეკემბერი</h2>
+
     </a>
 
-    <a class="video-card" href="https://youtu.be/Bt6EOgApJAA">
+
+    <!-- VIDEO 12 -->
+
+    <a
+        class="video-card"
+        href="https://youtu.be/Bt6EOgApJAA"
+        target="_blank"
+        data-id="Bt6EOgApJAA"
+    >
+
         <span class="fav">❤</span>
-        <img src="https://img.youtube.com/vi/Bt6EOgApJAA/hqdefault.jpg">
+
+        <img
+            src="https://img.youtube.com/vi/Bt6EOgApJAA/hqdefault.jpg"
+            alt="ქალაქური პოპური"
+        >
+
         <h2>ქალაქური პოპური</h2>
+
     </a>
+
 
 </div>
+
+
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
+
+
+<!-- PARTICLES -->
+
 <div class="particles">
+
     <span></span>
     <span></span>
     <span></span>
@@ -124,7 +372,9 @@
     <span></span>
     <span></span>
     <span></span>
+
 </div>
+
 
 </body>
 </html>
