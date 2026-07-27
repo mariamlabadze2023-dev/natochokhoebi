@@ -1,72 +1,38 @@
-/* =========================================
-   📱 MOBILE RESPONSIVE DESIGN
-   ========================================= */
+/* =====================================================
+   📱 NATO & CHOKHOS WEBSITE
+   RESPONSIVE / MOBILE CSS
+   ===================================================== */
 
 
-/* =========================================
-   TABLET
-   ========================================= */
+/* =====================================================
+   💻 TABLET
+   ===================================================== */
 
 @media (max-width: 900px) {
 
-    /* GENERAL */
-
+    html,
     body {
+        max-width: 100%;
         overflow-x: hidden;
     }
 
 
-    /* HEADER */
-
-    header {
-        padding: 15px 20px;
-    }
-
-    .main {
-        width: 100%;
-    }
-
-    .main ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px 20px;
-    }
-
-
-    /* PAGE TITLE */
-
     .page-title {
         font-size: 36px;
-        margin: 35px 20px;
         text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
 
-    /* CONCERTS */
-
-    .concerts {
-        width: 90%;
-        margin: 30px auto;
-    }
-
-
-    /* TICKETS */
-
-    .tickets {
-        width: 90%;
-        margin: 30px auto;
-    }
-
-
-    /* INTERVIEWS */
-
+    .concerts,
+    .tickets,
     .interviews {
         width: 90%;
-        margin: 30px auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-
-    /* CARDS */
 
     .concert-card,
     .ticket-card,
@@ -75,47 +41,25 @@
     }
 
 
-    /* IMAGES */
-
     .concert-card img,
     .ticket-card img,
     .interview-card img {
         max-width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-
-    /* SEARCH */
-
-    .search-bar {
-        width: 80%;
-        max-width: 600px;
-    }
-
-
-    /* FILTERS */
-
-    .filter-buttons,
-    .filter-box {
-        flex-wrap: wrap;
-        gap: 10px;
     }
 
 }
 
 
-
-/* =========================================
-   📱 MOBILE
-   ========================================= */
+/* =====================================================
+   📱 MOBILE — BURGER MENU
+   ===================================================== */
 
 @media (max-width: 768px) {
 
 
-    /* =====================================
+    /* =================================================
        GENERAL
-       ===================================== */
+       ================================================= */
 
     * {
         box-sizing: border-box;
@@ -135,25 +79,119 @@
     }
 
 
-
-    /* =====================================
-       HEADER / NAVIGATION
-       ===================================== */
+    /* =================================================
+       HEADER
+       ================================================= */
 
     header {
+        position: relative;
+
         width: 100%;
-        padding: 15px 10px;
+
+        padding: 10px 15px;
+
+        z-index: 1000;
     }
 
 
     .main {
+        position: relative;
+
         width: 100%;
+
+        min-height: 45px;
     }
 
 
+    /* =================================================
+       BURGER BUTTON
+       ================================================= */
+
+    .burger {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 45px;
+        height: 45px;
+
+        margin-left: auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+
+        font-size: 30px;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        color: inherit;
+
+        position: relative;
+
+        z-index: 2001;
+    }
+
+
+    /* =================================================
+       NAVIGATION — HIDDEN BY DEFAULT
+       ================================================= */
+
+    .main ul {
+        display: none !important;
+
+        position: absolute;
+
+        top: 55px;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 8px 0;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        background: #ffffff;
+
+        border-radius: 0 0 10px 10px;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.15);
+
+        z-index: 2000;
+    }
+
+
+    /* =================================================
+       NAVIGATION — OPEN
+       ================================================= */
+
+    .main ul.active {
+        display: flex !important;
+    }
+
+
+    /* =================================================
+       NAVIGATION ITEMS
+       ================================================= */
 
     .main ul li {
         width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
         text-align: center;
     }
 
@@ -163,48 +201,34 @@
 
         width: 100%;
 
-        padding: 8px 10px;
+        padding: 12px 15px;
 
         font-size: 15px;
+
+        text-decoration: none;
     }
 
 
+    /* =================================================
+       DARK MODE NAVIGATION
+       ================================================= */
 
-    /* =====================================
-       DARK MODE BUTTON
-       ===================================== */
+    body.dark .main ul {
+        background: #222222;
 
-    .dark-btn {
-        position: relative;
-
-        top: auto;
-        right: auto;
-
-        display: block;
-
-        margin: 10px auto;
-
-        font-size: 13px;
-
-        padding: 8px 14px;
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.4);
     }
 
 
-
-    /* =====================================
-       MUSIC WAVE
-       ===================================== */
-
-    .music-wave {
-        max-width: 100%;
-        overflow: hidden;
+    body.dark .main ul li a {
+        color: #ffffff;
     }
 
 
-
-    /* =====================================
+    /* =================================================
        PAGE TITLE
-       ===================================== */
+       ================================================= */
 
     .page-title {
         width: 90%;
@@ -221,55 +245,44 @@
     }
 
 
+    /* =================================================
+       DARK MODE BUTTON
+       ================================================= */
 
-    /* =====================================
-       HOME / HERO
-       ===================================== */
+    .dark-btn {
+        position: relative;
 
-    .hero,
-    .hero-section {
-        width: 100%;
+        display: block;
+
+        margin: 10px auto;
+
+        font-size: 13px;
+
+        padding: 8px 14px;
+    }
+
+
+    /* =================================================
+       MUSIC WAVE
+       ================================================= */
+
+    .music-wave {
         max-width: 100%;
+
+        overflow: hidden;
     }
 
 
-    .hero img,
-    .hero-section img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-
-    .hero h1,
-    .hero-section h1 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-
-
-    .hero p,
-    .hero-section p {
-        font-size: 15px;
-        line-height: 1.6;
-
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-
-    /* =====================================
+    /* =================================================
        CONCERT LIST
-       ===================================== */
+       ================================================= */
 
     .concerts {
         display: grid;
 
         grid-template-columns: 1fr;
 
-        width: 90%;
+        width: 92%;
 
         margin: 25px auto;
 
@@ -280,9 +293,9 @@
     .concert-card {
         width: 100%;
 
-        padding: 15px;
-
         overflow: hidden;
+
+        padding: 15px;
     }
 
 
@@ -317,17 +330,16 @@
     }
 
 
-
-    /* =====================================
+    /* =================================================
        TICKETS
-       ===================================== */
+       ================================================= */
 
     .tickets {
         display: grid;
 
         grid-template-columns: 1fr;
 
-        width: 90%;
+        width: 92%;
 
         margin: 25px auto;
 
@@ -338,9 +350,9 @@
     .ticket-card {
         width: 100%;
 
-        padding: 15px;
-
         overflow: hidden;
+
+        padding: 15px;
     }
 
 
@@ -378,10 +390,9 @@
     }
 
 
-
-    /* =====================================
+    /* =================================================
        TICKET FILTER BUTTONS
-       ===================================== */
+       ================================================= */
 
     .filter-buttons {
         display: flex;
@@ -392,7 +403,7 @@
 
         align-items: center;
 
-        width: 90%;
+        width: 92%;
 
         margin: 20px auto;
 
@@ -406,20 +417,21 @@
         padding: 10px 15px;
 
         font-size: 14px;
+
+        cursor: pointer;
     }
 
 
-
-    /* =====================================
+    /* =================================================
        INTERVIEWS
-       ===================================== */
+       ================================================= */
 
     .interviews {
         display: grid;
 
         grid-template-columns: 1fr;
 
-        width: 90%;
+        width: 92%;
 
         margin: 25px auto;
 
@@ -459,15 +471,14 @@
     }
 
 
-
-    /* =====================================
+    /* =================================================
        SEARCH
-       ===================================== */
+       ================================================= */
 
     .search-bar {
         display: block;
 
-        width: 90%;
+        width: 92%;
 
         max-width: none;
 
@@ -479,10 +490,9 @@
     }
 
 
-
-    /* =====================================
+    /* =================================================
        INTERVIEW FILTER
-       ===================================== */
+       ================================================= */
 
     .filter-box {
         display: flex;
@@ -493,7 +503,7 @@
 
         align-items: center;
 
-        width: 90%;
+        width: 92%;
 
         margin: 20px auto;
 
@@ -505,31 +515,31 @@
         padding: 10px 15px;
 
         font-size: 14px;
+
+        cursor: pointer;
     }
 
 
-
-    /* =====================================
-       BUY BUTTON
-       ===================================== */
+    /* =================================================
+       BUY TICKET BUTTON
+       ================================================= */
 
     .buy-btn {
         display: block;
 
         width: 100%;
 
-        text-align: center;
+        margin-top: 15px;
 
         padding: 12px 15px;
 
-        margin-top: 15px;
+        text-align: center;
     }
 
 
-
-    /* =====================================
+    /* =================================================
        MUSIC & VIDEOS
-       ===================================== */
+       ================================================= */
 
     .video-card {
         width: 100%;
@@ -540,11 +550,11 @@
 
     .video-card iframe,
     .video-card video {
+        display: block;
+
         width: 100%;
 
         max-width: 100%;
-
-        height: auto;
 
         aspect-ratio: 16 / 9;
     }
@@ -557,51 +567,44 @@
     }
 
 
-
-    /* =====================================
+    /* =================================================
        CONTACT FORM
-       ===================================== */
+       ================================================= */
 
-    .contact-form,
-    form {
-        width: 90%;
+    .contact-form {
+        width: 92%;
 
         max-width: 600px;
 
         margin-left: auto;
+
         margin-right: auto;
     }
 
 
     .contact-form input,
     .contact-form textarea,
-    .contact-form select,
-
-    form input,
-    form textarea,
-    form select {
+    .contact-form select {
         width: 100%;
 
         max-width: 100%;
 
-        font-size: 15px;
-
         padding: 12px;
+
+        font-size: 15px;
 
         box-sizing: border-box;
     }
 
 
-    .contact-form textarea,
-    form textarea {
+    .contact-form textarea {
         min-height: 130px;
 
         resize: vertical;
     }
 
 
-    .contact-form button,
-    form button {
+    .contact-form button {
         width: 100%;
 
         padding: 12px;
@@ -610,13 +613,12 @@
     }
 
 
-
-    /* =====================================
+    /* =================================================
        ADMIN PANEL
-       ===================================== */
+       ================================================= */
 
     .admin-panel {
-        width: 90%;
+        width: 92%;
 
         margin: 30px auto;
     }
@@ -650,20 +652,19 @@
 
 
     .admin-concerts {
-        width: 100%;
-
         display: grid;
 
         grid-template-columns: 1fr;
+
+        width: 100%;
 
         gap: 20px;
     }
 
 
-
-    /* =====================================
+    /* =================================================
        FOOTER
-       ===================================== */
+       ================================================= */
 
     footer {
         width: 100%;
@@ -681,10 +682,9 @@
     }
 
 
-
-    /* =====================================
+    /* =================================================
        PARTICLES
-       ===================================== */
+       ================================================= */
 
     .particles {
         max-width: 100%;
@@ -697,10 +697,9 @@
 }
 
 
-
-/* =========================================
+/* =====================================================
    📱 SMALL PHONES
-   ========================================= */
+   ===================================================== */
 
 @media (max-width: 480px) {
 
@@ -708,33 +707,42 @@
     /* HEADER */
 
     header {
-        padding: 10px 8px;
+        padding: 8px 12px;
+    }
+
+
+    .burger {
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 28px;
     }
 
 
     .main ul {
-        gap: 6px;
+        top: 52px;
     }
 
 
     .main ul li a {
-        font-size: 14px;
+        padding: 11px 10px;
 
-        padding: 7px;
+        font-size: 14px;
     }
 
 
-
-    /* TITLE */
+    /* PAGE TITLE */
 
     .page-title {
+        width: 94%;
+
         font-size: 26px;
 
         margin-top: 25px;
 
         margin-bottom: 20px;
     }
-
 
 
     /* CARDS */
@@ -768,7 +776,6 @@
     }
 
 
-
     /* FILTERS */
 
     .filter-buttons button,
@@ -777,7 +784,6 @@
 
         padding: 9px 12px;
     }
-
 
 
     /* SEARCH */
@@ -789,15 +795,13 @@
     }
 
 
-
-    /* DARK BUTTON */
+    /* DARK MODE */
 
     .dark-btn {
         font-size: 12px;
 
         padding: 7px 11px;
     }
-
 
 
     /* FOOTER */
@@ -809,218 +813,6 @@
 
     footer p {
         font-size: 12px;
-    }
-
-}
-
-/* =========================================
-   🍔 BURGER MENU
-   ========================================= */
-
-.burger {
-    display: none;
-
-    background: none;
-    border: none;
-
-    font-size: 30px;
-
-    cursor: pointer;
-
-    padding: 5px 10px;
-}
-
-
-/* =========================================
-   📱 MOBILE BURGER MENU
-   ========================================= */
-
-@media (max-width: 768px) {
-
-    header {
-        position: relative;
-        padding: 10px 15px;
-    }
-
-    .main {
-        width: 100%;
-        position: relative;
-    }
-
-
-    /* BURGER BUTTON */
-
-    .burger {
-        display: block;
-
-        margin-left: auto;
-
-        color: inherit;
-
-        position: relative;
-
-        z-index: 1001;
-    }
-
-
-    /* HIDE MENU BY DEFAULT */
-
-    .main ul {
-        display: none;
-
-        position: absolute;
-
-        top: 100%;
-        left: 0;
-
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 0;
-
-        padding: 10px 0;
-
-        margin: 0;
-
-        background: inherit;
-
-        z-index: 1000;
-    }
-
-
-    /* SHOW MENU */
-
-    .main ul.active {
-        display: flex;
-    }
-
-
-    /* MENU ITEMS */
-
-    .main ul li {
-        width: 100%;
-
-        text-align: center;
-    }
-
-
-    .main ul li a {
-        display: block;
-
-        width: 100%;
-
-        padding: 12px 15px;
-
-        font-size: 15px;
-    }
-
-}
-
-/* =========================================
-   🍔 BURGER MENU
-   ========================================= */
-
-.burger {
-    display: none;
-
-    background: none;
-    border: none;
-
-    font-size: 30px;
-
-    cursor: pointer;
-
-    padding: 5px 10px;
-}
-
-
-/* =========================================
-   📱 MOBILE BURGER MENU
-   ========================================= */
-
-@media (max-width: 768px) {
-
-    header {
-        position: relative;
-        padding: 10px 15px;
-    }
-
-    .main {
-        width: 100%;
-        position: relative;
-    }
-
-
-    /* BURGER BUTTON */
-
-    .burger {
-        display: block;
-
-        margin-left: auto;
-
-        color: inherit;
-
-        position: relative;
-
-        z-index: 1001;
-    }
-
-
-    /* HIDE MENU BY DEFAULT */
-
-    .main ul {
-        display: none;
-
-        position: absolute;
-
-        top: 100%;
-        left: 0;
-
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 0;
-
-        padding: 10px 0;
-
-        margin: 0;
-
-        background: inherit;
-
-        z-index: 1000;
-    }
-
-
-    /* SHOW MENU */
-
-    .main ul.active {
-        display: flex;
-    }
-
-
-    /* MENU ITEMS */
-
-    .main ul li {
-        width: 100%;
-
-        text-align: center;
-    }
-
-
-    .main ul li a {
-        display: block;
-
-        width: 100%;
-
-        padding: 12px 15px;
-
-        font-size: 15px;
     }
 
 }

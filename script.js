@@ -474,3 +474,57 @@ document.addEventListener(
 
     }
 );
+
+// ===============================
+// BURGER MENU
+// ===============================
+
+function toggleMenu() {
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+    if (!navMenu) return;
+
+    navMenu.classList.toggle("active");
+
+}
+
+
+// CLOSE MENU WHEN LINK IS CLICKED
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const navLinks =
+            document.querySelectorAll(
+                "#navMenu a"
+            );
+
+        navLinks.forEach(link => {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    const navMenu =
+                        document.getElementById(
+                            "navMenu"
+                        );
+
+                    if (navMenu) {
+
+                        navMenu.classList.remove(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+    }
+);
