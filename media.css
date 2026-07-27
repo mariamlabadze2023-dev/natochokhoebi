@@ -827,3 +827,74 @@
     }
 
 }
+/* Remove unwanted old burger-like elements */
+.burger-menu,
+.menu-toggle,
+.menu-btn {
+    display: none !important;
+}
+/* ===============================
+   FIX UNWANTED BURGER / BUTTON
+=============================== */
+
+/* Hide any old menu elements */
+.menu-toggle,
+.menu-btn,
+.burger-menu,
+.mobile-menu,
+.menu-icon {
+    display: none !important;
+}
+
+
+/* Keep ONLY the real burger */
+.burger {
+    display: none;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex !important;
+
+        position: absolute;
+        top: 12px;
+        left: 15px;
+
+        width: 42px;
+        height: 36px;
+
+        padding: 0;
+        margin: 0;
+
+        justify-content: center;
+        align-items: center;
+
+        border: none;
+        outline: none;
+
+        border-radius: 8px;
+
+        background: crimson;
+        color: white;
+
+        font-size: 24px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        z-index: 2001;
+
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    .burger:focus,
+    .burger:active {
+        outline: none;
+        border: none;
+    }
+
+}
