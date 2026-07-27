@@ -151,20 +151,6 @@
     }
 
 
-    .main ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-
-        gap: 10px;
-
-        padding: 10px 0;
-        margin: 0;
-    }
-
 
     .main ul li {
         width: 100%;
@@ -823,6 +809,218 @@
 
     footer p {
         font-size: 12px;
+    }
+
+}
+
+/* =========================================
+   🍔 BURGER MENU
+   ========================================= */
+
+.burger {
+    display: none;
+
+    background: none;
+    border: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    padding: 5px 10px;
+}
+
+
+/* =========================================
+   📱 MOBILE BURGER MENU
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+        padding: 10px 15px;
+    }
+
+    .main {
+        width: 100%;
+        position: relative;
+    }
+
+
+    /* BURGER BUTTON */
+
+    .burger {
+        display: block;
+
+        margin-left: auto;
+
+        color: inherit;
+
+        position: relative;
+
+        z-index: 1001;
+    }
+
+
+    /* HIDE MENU BY DEFAULT */
+
+    .main ul {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        padding: 10px 0;
+
+        margin: 0;
+
+        background: inherit;
+
+        z-index: 1000;
+    }
+
+
+    /* SHOW MENU */
+
+    .main ul.active {
+        display: flex;
+    }
+
+
+    /* MENU ITEMS */
+
+    .main ul li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .main ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 15px;
+
+        font-size: 15px;
+    }
+
+}
+
+/* =========================================
+   🍔 BURGER MENU
+   ========================================= */
+
+.burger {
+    display: none;
+
+    background: none;
+    border: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    padding: 5px 10px;
+}
+
+
+/* =========================================
+   📱 MOBILE BURGER MENU
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+        padding: 10px 15px;
+    }
+
+    .main {
+        width: 100%;
+        position: relative;
+    }
+
+
+    /* BURGER BUTTON */
+
+    .burger {
+        display: block;
+
+        margin-left: auto;
+
+        color: inherit;
+
+        position: relative;
+
+        z-index: 1001;
+    }
+
+
+    /* HIDE MENU BY DEFAULT */
+
+    .main ul {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        padding: 10px 0;
+
+        margin: 0;
+
+        background: inherit;
+
+        z-index: 1000;
+    }
+
+
+    /* SHOW MENU */
+
+    .main ul.active {
+        display: flex;
+    }
+
+
+    /* MENU ITEMS */
+
+    .main ul li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .main ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 15px;
+
+        font-size: 15px;
     }
 
 }
