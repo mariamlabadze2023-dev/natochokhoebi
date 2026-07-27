@@ -1,21 +1,21 @@
 /* =====================================================
-   📱 NATO & CHOKHOS WEBSITE
+   NATO & CHOKHOS WEBSITE
    RESPONSIVE / MOBILE CSS
-   ===================================================== */
+===================================================== */
 
 
 /* =====================================================
-   💻 TABLET
-   ===================================================== */
+   TABLET
+===================================================== */
 
 @media (max-width: 900px) {
 
     html,
     body {
+        width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
-
 
     .page-title {
         font-size: 36px;
@@ -23,7 +23,6 @@
         margin-left: 20px;
         margin-right: 20px;
     }
-
 
     .concerts,
     .tickets,
@@ -33,13 +32,11 @@
         margin-right: auto;
     }
 
-
     .concert-card,
     .ticket-card,
     .interview-card {
         max-width: 100%;
     }
-
 
     .concert-card img,
     .ticket-card img,
@@ -51,20 +48,14 @@
 
 
 /* =====================================================
-   📱 MOBILE — BURGER MENU
-   ===================================================== */
+   MOBILE
+===================================================== */
 
 @media (max-width: 768px) {
-
-
-    /* =================================================
-       GENERAL
-       ================================================= */
 
     * {
         box-sizing: border-box;
     }
-
 
     html,
     body {
@@ -73,7 +64,6 @@
         overflow-x: hidden;
     }
 
-
     body {
         font-size: 15px;
     }
@@ -81,89 +71,97 @@
 
     /* =================================================
        HEADER
-       ================================================= */
+    ================================================= */
 
     header {
-        position: relative;
+        position: sticky;
+        top: 0;
 
         width: 100%;
+        min-height: 60px;
 
-        padding: 10px 15px;
+        padding: 8px 15px;
 
         z-index: 1000;
     }
 
 
-    .main {
-        position: relative;
-
-        width: 100%;
-
-        min-height: 45px;
-    }
-
-
     /* =================================================
-       BURGER BUTTON
-       ================================================= */
+       BURGER MENU
+    ================================================= */
 
     .burger {
         display: flex;
 
+        position: absolute;
+        top: 10px;
+        left: 15px;
+
+        width: 42px;
+        height: 42px;
+
         align-items: center;
         justify-content: center;
 
-        width: 45px;
-        height: 45px;
-
-        margin-left: auto;
-
+        margin: 0;
         padding: 0;
 
-        background: transparent;
-
         border: none;
+        border-radius: 8px;
 
-        font-size: 30px;
+        background: crimson;
+        color: white;
 
+        font-size: 25px;
         line-height: 1;
 
         cursor: pointer;
 
-        color: inherit;
-
-        position: relative;
-
         z-index: 2001;
+
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    .burger:hover {
+        background: #b00020;
+    }
+
+    .burger:focus {
+        outline: none;
     }
 
 
     /* =================================================
-       NAVIGATION — HIDDEN BY DEFAULT
-       ================================================= */
+       NAVIGATION
+    ================================================= */
+
+    .main {
+        width: 100%;
+        min-height: 45px;
+    }
 
     .main ul {
         display: none !important;
 
         position: absolute;
 
-        top: 55px;
+        top: 60px;
         left: 0;
 
         width: 100%;
 
         margin: 0;
-        padding: 8px 0;
+        padding: 10px 0;
 
         flex-direction: column;
-
         align-items: center;
 
         gap: 0;
 
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.98);
 
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 12px 12px;
 
         box-shadow:
             0 5px 15px rgba(0, 0, 0, 0.15);
@@ -172,36 +170,30 @@
     }
 
 
-    /* =================================================
-       NAVIGATION — OPEN
-       ================================================= */
+    /* OPEN MENU */
 
-    .main ul.active {
+    .main.active ul {
         display: flex !important;
     }
 
 
-    /* =================================================
-       NAVIGATION ITEMS
-       ================================================= */
+    /* NAVIGATION LINKS */
 
     .main ul li {
         width: 100%;
 
         margin: 0;
-
         padding: 0;
 
         text-align: center;
     }
-
 
     .main ul li a {
         display: block;
 
         width: 100%;
 
-        padding: 12px 15px;
+        padding: 13px 15px;
 
         font-size: 15px;
 
@@ -209,9 +201,7 @@
     }
 
 
-    /* =================================================
-       DARK MODE NAVIGATION
-       ================================================= */
+    /* DARK MODE NAVIGATION */
 
     body.dark .main ul {
         background: #222222;
@@ -220,15 +210,14 @@
             0 5px 15px rgba(0, 0, 0, 0.4);
     }
 
-
     body.dark .main ul li a {
-        color: #ffffff;
+        color: white;
     }
 
 
     /* =================================================
        PAGE TITLE
-       ================================================= */
+    ================================================= */
 
     .page-title {
         width: 90%;
@@ -247,7 +236,7 @@
 
     /* =================================================
        DARK MODE BUTTON
-       ================================================= */
+    ================================================= */
 
     .dark-btn {
         position: relative;
@@ -256,26 +245,25 @@
 
         margin: 10px auto;
 
-        font-size: 13px;
-
         padding: 8px 14px;
+
+        font-size: 13px;
     }
 
 
     /* =================================================
        MUSIC WAVE
-       ================================================= */
+    ================================================= */
 
     .music-wave {
         max-width: 100%;
-
         overflow: hidden;
     }
 
 
     /* =================================================
        CONCERT LIST
-       ================================================= */
+    ================================================= */
 
     .concerts {
         display: grid;
@@ -289,28 +277,24 @@
         gap: 25px;
     }
 
-
     .concert-card {
         width: 100%;
 
-        overflow: hidden;
-
         padding: 15px;
-    }
 
+        overflow: hidden;
+    }
 
     .concert-card img {
         display: block;
 
         width: 100%;
-
         height: auto;
 
         max-height: 350px;
 
         object-fit: cover;
     }
-
 
     .concert-card h2 {
         font-size: 22px;
@@ -319,7 +303,6 @@
 
         word-wrap: break-word;
     }
-
 
     .concert-card p {
         font-size: 14px;
@@ -332,7 +315,7 @@
 
     /* =================================================
        TICKETS
-       ================================================= */
+    ================================================= */
 
     .tickets {
         display: grid;
@@ -346,28 +329,24 @@
         gap: 25px;
     }
 
-
     .ticket-card {
         width: 100%;
 
-        overflow: hidden;
-
         padding: 15px;
-    }
 
+        overflow: hidden;
+    }
 
     .ticket-card img {
         display: block;
 
         width: 100%;
-
         height: auto;
 
         max-height: 350px;
 
         object-fit: cover;
     }
-
 
     .ticket-card h2 {
         font-size: 21px;
@@ -377,13 +356,11 @@
         word-wrap: break-word;
     }
 
-
     .ticket-card p {
         font-size: 14px;
 
         line-height: 1.6;
     }
-
 
     .ticket-card .price {
         font-size: 16px;
@@ -392,7 +369,7 @@
 
     /* =================================================
        TICKET FILTER BUTTONS
-       ================================================= */
+    ================================================= */
 
     .filter-buttons {
         display: flex;
@@ -400,7 +377,6 @@
         flex-wrap: wrap;
 
         justify-content: center;
-
         align-items: center;
 
         width: 92%;
@@ -409,7 +385,6 @@
 
         gap: 10px;
     }
-
 
     .filter-buttons button {
         min-width: 90px;
@@ -423,106 +398,8 @@
 
 
     /* =================================================
-       INTERVIEWS
-       ================================================= */
-
-    .interviews {
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        width: 92%;
-
-        margin: 25px auto;
-
-        gap: 25px;
-    }
-
-
-    .interview-card {
-        width: 100%;
-
-        overflow: hidden;
-    }
-
-
-    .interview-card img {
-        display: block;
-
-        width: 100%;
-
-        height: auto;
-
-        object-fit: cover;
-    }
-
-
-    .interview-card h2 {
-        font-size: 20px;
-
-        line-height: 1.3;
-
-        word-wrap: break-word;
-    }
-
-
-    .interview-card .fav {
-        font-size: 22px;
-    }
-
-
-    /* =================================================
-       SEARCH
-       ================================================= */
-
-    .search-bar {
-        display: block;
-
-        width: 92%;
-
-        max-width: none;
-
-        margin: 20px auto;
-
-        padding: 12px 15px;
-
-        font-size: 15px;
-    }
-
-
-    /* =================================================
-       INTERVIEW FILTER
-       ================================================= */
-
-    .filter-box {
-        display: flex;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        align-items: center;
-
-        width: 92%;
-
-        margin: 20px auto;
-
-        gap: 10px;
-    }
-
-
-    .filter-box button {
-        padding: 10px 15px;
-
-        font-size: 14px;
-
-        cursor: pointer;
-    }
-
-
-    /* =================================================
        BUY TICKET BUTTON
-       ================================================= */
+    ================================================= */
 
     .buy-btn {
         display: block;
@@ -538,8 +415,98 @@
 
 
     /* =================================================
+       INTERVIEWS
+    ================================================= */
+
+    .interviews {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        width: 92%;
+
+        margin: 25px auto;
+
+        gap: 25px;
+    }
+
+    .interview-card {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .interview-card img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        object-fit: cover;
+    }
+
+    .interview-card h2 {
+        font-size: 20px;
+
+        line-height: 1.3;
+
+        word-wrap: break-word;
+    }
+
+    .interview-card .fav {
+        font-size: 22px;
+    }
+
+
+    /* =================================================
+       SEARCH
+    ================================================= */
+
+    .search-bar {
+        display: block;
+
+        width: 92%;
+        max-width: none;
+
+        margin: 20px auto;
+
+        padding: 12px 15px;
+
+        font-size: 15px;
+    }
+
+
+    /* =================================================
+       INTERVIEW FILTER
+    ================================================= */
+
+    .filter-box {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 92%;
+
+        margin: 20px auto;
+
+        gap: 10px;
+    }
+
+    .filter-box button {
+        padding: 10px 15px;
+
+        font-size: 14px;
+
+        cursor: pointer;
+    }
+
+
+    /* =================================================
        MUSIC & VIDEOS
-       ================================================= */
+    ================================================= */
 
     .video-card {
         width: 100%;
@@ -547,29 +514,25 @@
         overflow: hidden;
     }
 
-
     .video-card iframe,
     .video-card video {
         display: block;
 
         width: 100%;
-
         max-width: 100%;
 
         aspect-ratio: 16 / 9;
     }
 
-
     .video-card img {
         width: 100%;
-
         height: auto;
     }
 
 
     /* =================================================
        CONTACT FORM
-       ================================================= */
+    ================================================= */
 
     .contact-form {
         width: 92%;
@@ -577,16 +540,13 @@
         max-width: 600px;
 
         margin-left: auto;
-
         margin-right: auto;
     }
-
 
     .contact-form input,
     .contact-form textarea,
     .contact-form select {
         width: 100%;
-
         max-width: 100%;
 
         padding: 12px;
@@ -596,13 +556,11 @@
         box-sizing: border-box;
     }
 
-
     .contact-form textarea {
         min-height: 130px;
 
         resize: vertical;
     }
-
 
     .contact-form button {
         width: 100%;
@@ -615,7 +573,7 @@
 
     /* =================================================
        ADMIN PANEL
-       ================================================= */
+    ================================================= */
 
     .admin-panel {
         width: 92%;
@@ -623,11 +581,9 @@
         margin: 30px auto;
     }
 
-
     .concert-form {
         width: 100%;
     }
-
 
     .concert-form input,
     .concert-form select {
@@ -635,7 +591,6 @@
 
         box-sizing: border-box;
     }
-
 
     .form-buttons {
         display: flex;
@@ -645,11 +600,9 @@
         gap: 10px;
     }
 
-
     .form-buttons button {
         width: 100%;
     }
-
 
     .admin-concerts {
         display: grid;
@@ -664,7 +617,7 @@
 
     /* =================================================
        FOOTER
-       ================================================= */
+    ================================================= */
 
     footer {
         width: 100%;
@@ -673,7 +626,6 @@
 
         text-align: center;
     }
-
 
     footer p {
         font-size: 13px;
@@ -684,7 +636,7 @@
 
     /* =================================================
        PARTICLES
-       ================================================= */
+    ================================================= */
 
     .particles {
         max-width: 100%;
@@ -698,32 +650,28 @@
 
 
 /* =====================================================
-   📱 SMALL PHONES
-   ===================================================== */
+   SMALL PHONES
+===================================================== */
 
 @media (max-width: 480px) {
-
-
-    /* HEADER */
 
     header {
         padding: 8px 12px;
     }
 
-
     .burger {
-        width: 42px;
+        top: 9px;
+        left: 12px;
 
+        width: 42px;
         height: 42px;
 
-        font-size: 28px;
+        font-size: 25px;
     }
-
 
     .main ul {
-        top: 52px;
+        top: 58px;
     }
-
 
     .main ul li a {
         padding: 11px 10px;
@@ -740,7 +688,6 @@
         font-size: 26px;
 
         margin-top: 25px;
-
         margin-bottom: 20px;
     }
 
@@ -755,20 +702,17 @@
         gap: 20px;
     }
 
-
     .concert-card,
     .ticket-card,
     .interview-card {
         padding: 12px;
     }
 
-
     .concert-card h2,
     .ticket-card h2,
     .interview-card h2 {
         font-size: 19px;
     }
-
 
     .concert-card p,
     .ticket-card p {
@@ -810,91 +754,112 @@
         padding: 20px 10px;
     }
 
-
     footer p {
         font-size: 12px;
     }
 
 }
+/* =========================================
+   FINAL BURGER MENU FIX
+========================================= */
+
 @media (max-width: 768px) {
 
-    /* Hide old menu elements */
-    header > .burger,
-    .main > .menu-btn,
-    .main > .menu-toggle,
-    .main > .menu-icon {
+    /* მთავარი burger */
+    header .main .burger {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        position: absolute !important;
+        top: 10px !important;
+        left: 15px !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        background: crimson !important;
+        color: white !important;
+
+        border: 0 !important;
+        outline: 0 !important;
+        box-shadow: none !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        font-size: 25px !important;
+        line-height: 1 !important;
+
+        appearance: none !important;
+        -webkit-appearance: none !important;
+
+        z-index: 99999 !important;
+    }
+
+    /* მთავარი burger-ის ფსევდო-ელემენტები */
+    header .main .burger::before,
+    header .main .burger::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    /* თუ რამე სხვა ელემენტი ქმნის პატარა ნაცრისფერ ღილაკს */
+    header::before,
+    header::after,
+    .main::before,
+    .main::after {
+        content: none !important;
         display: none !important;
     }
 
 }
-/* Remove unwanted old burger-like elements */
-.burger-menu,
-.menu-toggle,
-.menu-btn {
-    display: none !important;
-}
-/* ===============================
-   FIX UNWANTED BURGER / BUTTON
-=============================== */
+/* =========================================
+   BURGER MENU - HIDE ON DESKTOP
+========================================= */
 
-/* Hide any old menu elements */
-.menu-toggle,
-.menu-btn,
-.burger-menu,
-.mobile-menu,
-.menu-icon {
-    display: none !important;
-}
-
-
-/* Keep ONLY the real burger */
 .burger {
     display: none;
 }
 
 
-/* MOBILE */
+/* =========================================
+   SHOW BURGER ONLY ON MOBILE
+========================================= */
+
 @media (max-width: 768px) {
 
     .burger {
         display: flex !important;
 
         position: absolute;
-        top: 12px;
+        top: 10px;
         left: 15px;
 
         width: 42px;
-        height: 36px;
-
-        padding: 0;
-        margin: 0;
+        height: 42px;
 
         justify-content: center;
         align-items: center;
 
-        border: none;
-        outline: none;
-
-        border-radius: 8px;
+        padding: 0;
+        margin: 0;
 
         background: crimson;
         color: white;
 
-        font-size: 24px;
+        border: none;
+        border-radius: 8px;
+
+        font-size: 25px;
         line-height: 1;
 
         cursor: pointer;
 
-        z-index: 2001;
+        z-index: 9999;
 
         appearance: none;
         -webkit-appearance: none;
-    }
-
-    .burger:focus,
-    .burger:active {
-        outline: none;
-        border: none;
     }
 
 }

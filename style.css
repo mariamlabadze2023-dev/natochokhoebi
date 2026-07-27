@@ -1695,3 +1695,19 @@ body.dark .concert-form select {
         flex-direction: column;
     }
 }
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex !important;
+    }
+
+    .main ul {
+        display: none !important;
+    }
+
+    .main ul.active {
+        display: flex !important;
+    }
+
+}

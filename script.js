@@ -4,204 +4,341 @@
 
 function toggleDarkMode() {
 
-```
-document.body.classList.toggle("dark");
+    document.body.classList.toggle("dark");
 
-localStorage.setItem(
-    "dark",
-    document.body.classList.contains("dark") ? "on" : "off"
-);
-```
+    localStorage.setItem(
+        "dark",
+        document.body.classList.contains("dark")
+            ? "on"
+            : "off"
+    );
 
 }
+
+
+// LOAD DARK MODE
 
 window.addEventListener("load", () => {
 
-```
-if (localStorage.getItem("dark") === "on") {
-    document.body.classList.add("dark");
-}
-```
+    if (localStorage.getItem("dark") === "on") {
+
+        document.body.classList.add("dark");
+
+    }
 
 });
+
+
+// =====================
+// 🍔 BURGER MENU
+// =====================
+
+function toggleMenu() {
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+    if (!navMenu) return;
+
+    navMenu.classList.toggle("active");
+
+}
+
+
+// =====================
+// CLOSE BURGER MENU
+// AFTER CLICKING A LINK
+// =====================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const navLinks =
+            document.querySelectorAll(
+                "#navMenu a"
+            );
+
+
+        navLinks.forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    const navMenu =
+                        document.getElementById(
+                            "navMenu"
+                        );
+
+
+                    if (navMenu) {
+
+                        navMenu.classList.remove(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+    }
+);
+
 
 // =====================
 // 🔍 SEARCH
 // VIDEOS + INTERVIEWS
 // =====================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-```
-const searchInput = document.getElementById("searchInput");
+        const searchInput =
+            document.getElementById(
+                "searchInput"
+            );
 
-if (!searchInput) return;
 
-const cards = document.querySelectorAll(
-    ".video-card, .interview-card"
+        if (!searchInput) return;
+
+
+        const cards =
+            document.querySelectorAll(
+                ".video-card, .interview-card"
+            );
+
+
+        searchInput.addEventListener(
+            "input",
+            () => {
+
+                const value =
+                    searchInput.value
+                        .toLowerCase();
+
+
+                cards.forEach(card => {
+
+                    const title =
+                        (
+                            card.dataset.title ||
+                            card.querySelector("h2")?.innerText ||
+                            ""
+                        ).toLowerCase();
+
+
+                    card.style.display =
+                        title.includes(value)
+                            ? "block"
+                            : "none";
+
+                });
+
+            }
+        );
+
+    }
 );
 
-searchInput.addEventListener("input", () => {
-
-    const value =
-        searchInput.value.toLowerCase();
-
-    cards.forEach(card => {
-
-        const title =
-            (
-                card.dataset.title ||
-                card.querySelector("h2")?.innerText ||
-                ""
-            ).toLowerCase();
-
-        card.style.display =
-            title.includes(value)
-                ? "block"
-                : "none";
-
-    });
-
-});
-```
-
-});
 
 // =====================
 // ❤️ VIDEO FAVORITES
 // =====================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-```
-let saved =
-    JSON.parse(
-        localStorage.getItem("favorites")
-    ) || [];
-
-
-document.querySelectorAll(".video-card").forEach(card => {
-
-    const img =
-        card.querySelector("img");
-
-    const fav =
-        card.querySelector(".fav");
+        let saved =
+            JSON.parse(
+                localStorage.getItem(
+                    "favorites"
+                )
+            ) || [];
 
 
-    if (!img || !fav) return;
+        document
+            .querySelectorAll(
+                ".video-card"
+            )
+            .forEach(card => {
+
+                const img =
+                    card.querySelector(
+                        "img"
+                    );
 
 
-    const id = img.src;
+                const fav =
+                    card.querySelector(
+                        ".fav"
+                    );
 
 
-    if (saved.includes(id)) {
-
-        fav.classList.add("active");
-
-    }
+                if (!img || !fav) return;
 
 
-    fav.addEventListener("click", (e) => {
-
-        e.preventDefault();
-        e.stopPropagation();
+                const id =
+                    img.src;
 
 
-        if (saved.includes(id)) {
+                // CHECK SAVED FAVORITE
 
-            saved =
-                saved.filter(
-                    i => i !== id
+                if (
+                    saved.includes(id)
+                ) {
+
+                    fav.classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                // FAVORITE CLICK
+
+                fav.addEventListener(
+                    "click",
+                    (e) => {
+
+                        e.preventDefault();
+
+                        e.stopPropagation();
+
+
+                        if (
+                            saved.includes(id)
+                        ) {
+
+                            saved =
+                                saved.filter(
+                                    item =>
+                                        item !== id
+                                );
+
+
+                            fav.classList.remove(
+                                "active"
+                            );
+
+                        } else {
+
+                            saved.push(id);
+
+
+                            fav.classList.add(
+                                "active"
+                            );
+
+                        }
+
+
+                        localStorage.setItem(
+                            "favorites",
+                            JSON.stringify(
+                                saved
+                            )
+                        );
+
+                    }
                 );
 
-            fav.classList.remove("active");
+            });
 
-        } else {
+    }
+);
 
-            saved.push(id);
-
-            fav.classList.add("active");
-
-        }
-
-
-        localStorage.setItem(
-            "favorites",
-            JSON.stringify(saved)
-        );
-
-    });
-
-});
-```
-
-});
 
 // =====================
 // ❤️ INTERVIEW FAVORITES
 // =====================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-```
-document
-    .querySelectorAll(".interview-card")
-    .forEach(card => {
+        document
+            .querySelectorAll(
+                ".interview-card"
+            )
+            .forEach(card => {
 
-        const fav =
-            card.querySelector(".fav");
-
-        const id =
-            card.dataset.title;
-
-
-        if (!fav || !id) return;
-
-
-        if (
-            localStorage.getItem(
-                "fav_" + id
-            ) === "true"
-        ) {
-
-            fav.classList.add("active");
-
-        }
+                const fav =
+                    card.querySelector(
+                        ".fav"
+                    );
 
 
-        fav.addEventListener("click", (e) => {
-
-            e.preventDefault();
-            e.stopPropagation();
+                const id =
+                    card.dataset.title;
 
 
-            fav.classList.toggle("active");
+                if (!fav || !id) return;
 
 
-            if (
-                fav.classList.contains("active")
-            ) {
+                // CHECK SAVED FAVORITE
 
-                localStorage.setItem(
-                    "fav_" + id,
-                    "true"
+                if (
+                    localStorage.getItem(
+                        "fav_" + id
+                    ) === "true"
+                ) {
+
+                    fav.classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                // FAVORITE CLICK
+
+                fav.addEventListener(
+                    "click",
+                    (e) => {
+
+                        e.preventDefault();
+
+                        e.stopPropagation();
+
+
+                        fav.classList.toggle(
+                            "active"
+                        );
+
+
+                        if (
+                            fav.classList.contains(
+                                "active"
+                            )
+                        ) {
+
+                            localStorage.setItem(
+                                "fav_" + id,
+                                "true"
+                            );
+
+                        } else {
+
+                            localStorage.removeItem(
+                                "fav_" + id
+                            );
+
+                        }
+
+                    }
                 );
 
-            } else {
+            });
 
-                localStorage.removeItem(
-                    "fav_" + id
-                );
+    }
+);
 
-            }
-
-        });
-
-    });
-```
-
-});
 
 // =====================
 // ❤️ INTERVIEW FILTERS
@@ -209,43 +346,47 @@ document
 
 function showAll() {
 
-```
-document
-    .querySelectorAll(".interview-card")
-    .forEach(card => {
+    document
+        .querySelectorAll(
+            ".interview-card"
+        )
+        .forEach(card => {
 
-        card.style.display = "block";
+            card.style.display =
+                "block";
 
-    });
-```
+        });
 
 }
+
 
 function showFavs() {
 
-```
-document
-    .querySelectorAll(".interview-card")
-    .forEach(card => {
+    document
+        .querySelectorAll(
+            ".interview-card"
+        )
+        .forEach(card => {
 
-        const id =
-            card.dataset.title;
-
-        const isFav =
-            localStorage.getItem(
-                "fav_" + id
-            ) === "true";
+            const id =
+                card.dataset.title;
 
 
-        card.style.display =
-            isFav
-                ? "block"
-                : "none";
+            const isFav =
+                localStorage.getItem(
+                    "fav_" + id
+                ) === "true";
 
-    });
-```
+
+            card.style.display =
+                isFav
+                    ? "block"
+                    : "none";
+
+        });
 
 }
+
 
 // =====================
 // 🎟 TICKETS FILTER
@@ -253,278 +394,222 @@ document
 
 function filterTickets(type) {
 
-```
-const cards =
-    document.querySelectorAll(
-        ".ticket-card"
-    );
+    const cards =
+        document.querySelectorAll(
+            ".ticket-card"
+        );
 
 
-const buttons =
-    document.querySelectorAll(
-        ".filter-buttons button"
-    );
+    const buttons =
+        document.querySelectorAll(
+            ".filter-buttons button"
+        );
 
 
-buttons.forEach(btn => {
+    // REMOVE ACTIVE FROM BUTTONS
 
-    btn.classList.remove("active");
+    buttons.forEach(button => {
 
-});
+        button.classList.remove(
+            "active"
+        );
+
+    });
 
 
-if (event?.target) {
+    // ADD ACTIVE TO CLICKED BUTTON
 
-    event.target.classList.add("active");
+    if (
+        typeof event !== "undefined" &&
+        event.target
+    ) {
+
+        event.target.classList.add(
+            "active"
+        );
+
+    }
+
+
+    // FILTER CARDS
+
+    cards.forEach(card => {
+
+        if (type === "all") {
+
+            card.style.display =
+                "block";
+
+        }
+
+
+        else if (
+            type === "available"
+        ) {
+
+            card.style.display =
+                card.classList.contains(
+                    "ended"
+                )
+                    ? "none"
+                    : "block";
+
+        }
+
+
+        else if (
+            type === "ended"
+        ) {
+
+            card.style.display =
+                card.classList.contains(
+                    "ended"
+                )
+                    ? "block"
+                    : "none";
+
+        }
+
+    });
 
 }
 
-
-cards.forEach(card => {
-
-    if (type === "all") {
-
-        card.style.display = "block";
-
-    }
-
-    else if (type === "available") {
-
-        card.style.display =
-            card.classList.contains("ended")
-                ? "none"
-                : "block";
-
-    }
-
-    else if (type === "ended") {
-
-        card.style.display =
-            card.classList.contains("ended")
-                ? "block"
-                : "none";
-
-    }
-
-});
-```
-
-}
 
 // =====================
 // ❤️ FAN MESSAGE FORM
 // FORMSPREE
 // =====================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-```
-const fanForm =
-    document.getElementById("fanForm");
-
-const formMessage =
-    document.getElementById("formMessage");
-
-
-if (!fanForm || !formMessage) return;
-
-
-fanForm.addEventListener(
-    "submit",
-    async (e) => {
-
-        e.preventDefault();
-
-
-        const submitButton =
-            fanForm.querySelector(
-                ".send-message-btn"
+        const fanForm =
+            document.getElementById(
+                "fanForm"
             );
 
 
-        submitButton.disabled = true;
-
-        submitButton.textContent =
-            "Sending...";
-
-
-        const formData =
-            new FormData(fanForm);
+        const formMessage =
+            document.getElementById(
+                "formMessage"
+            );
 
 
-        try {
-
-            const response =
-                await fetch(
-                    fanForm.action,
-                    {
-                        method: "POST",
-                        body: formData,
-                        headers: {
-                            "Accept":
-                                "application/json"
-                        }
-                    }
-                );
+        if (
+            !fanForm ||
+            !formMessage
+        ) return;
 
 
-            if (response.ok) {
+        fanForm.addEventListener(
+            "submit",
+            async (e) => {
 
-                fanForm.reset();
-
-
-                formMessage.textContent =
-                    "Thank you for your message! ❤️";
+                e.preventDefault();
 
 
-                formMessage.style.display =
-                    "block";
+                const submitButton =
+                    fanForm.querySelector(
+                        ".send-message-btn"
+                    );
+
+
+                submitButton.disabled =
+                    true;
 
 
                 submitButton.textContent =
-                    "Message Sent ❤️";
+                    "Sending...";
 
 
-            } else {
+                const formData =
+                    new FormData(
+                        fanForm
+                    );
 
-                throw new Error(
-                    "Form submission failed"
-                );
+
+                try {
+
+                    const response =
+                        await fetch(
+                            fanForm.action,
+                            {
+                                method: "POST",
+
+                                body:
+                                    formData,
+
+                                headers: {
+                                    "Accept":
+                                        "application/json"
+                                }
+                            }
+                        );
+
+
+                    if (
+                        response.ok
+                    ) {
+
+                        fanForm.reset();
+
+
+                        formMessage.textContent =
+                            "Thank you for your message! ❤️";
+
+
+                        formMessage.style.display =
+                            "block";
+
+
+                        formMessage.style.color =
+                            "#2ecc71";
+
+
+                        submitButton.textContent =
+                            "Message Sent ❤️";
+
+                    } else {
+
+                        throw new Error(
+                            "Form submission failed"
+                        );
+
+                    }
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Form error:",
+                        error
+                    );
+
+
+                    formMessage.textContent =
+                        "Something went wrong. Please try again.";
+
+
+                    formMessage.style.display =
+                        "block";
+
+
+                    formMessage.style.color =
+                        "crimson";
+
+
+                    submitButton.textContent =
+                        "Send Message ❤️";
+
+                }
+
+
+                submitButton.disabled =
+                    false;
 
             }
-
-
-        } catch (error) {
-
-            formMessage.textContent =
-                "Something went wrong. Please try again.";
-
-            formMessage.style.display =
-                "block";
-
-
-            formMessage.style.color =
-                "crimson";
-
-
-            submitButton.textContent =
-                "Send Message ❤️";
-
-        }
-
-
-        submitButton.disabled = false;
-
-    }
-);
-```
-
-});
-
-// ===============================
-// BURGER MENU
-// ===============================
-
-function toggleMenu() {
-
-    const navMenu =
-        document.getElementById("navMenu");
-
-    if (!navMenu) return;
-
-    navMenu.classList.toggle("active");
-
-}
-
-
-// CLOSE MENU AFTER CLICKING A LINK
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        const navLinks =
-            document.querySelectorAll(
-                "#navMenu a"
-            );
-
-        navLinks.forEach(link => {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    const navMenu =
-                        document.getElementById(
-                            "navMenu"
-                        );
-
-                    if (navMenu) {
-
-                        navMenu.classList.remove(
-                            "active"
-                        );
-
-                    }
-
-                }
-            );
-
-        });
-
-    }
-);
-
-// ===============================
-// BURGER MENU
-// ===============================
-
-function toggleMenu() {
-
-    const navMenu =
-        document.getElementById("navMenu");
-
-    if (!navMenu) return;
-
-    navMenu.classList.toggle("active");
-
-}
-
-
-// CLOSE MENU WHEN LINK IS CLICKED
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        const navLinks =
-            document.querySelectorAll(
-                "#navMenu a"
-            );
-
-        navLinks.forEach(link => {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    const navMenu =
-                        document.getElementById(
-                            "navMenu"
-                        );
-
-                    if (navMenu) {
-
-                        navMenu.classList.remove(
-                            "active"
-                        );
-
-                    }
-
-                }
-            );
-
-        });
+        );
 
     }
 );
