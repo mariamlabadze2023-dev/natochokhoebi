@@ -1711,3 +1711,170 @@ body.dark .concert-form select {
     }
 
 }
+
+/* ===============================
+   TICKET ADMIN PANEL
+=============================== */
+
+#ticketForm {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+#ticketForm input,
+#ticketForm select {
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+}
+
+
+#ticketForm button {
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #111;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+#ticketForm button:hover {
+
+    opacity: 0.8;
+
+}
+
+
+
+#ticketFormTitle {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+    font-size: 28px;
+
+}
+
+
+
+#ticketMessage {
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+
+
+#adminTickets {
+
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
+
+    gap: 25px;
+
+}
+
+
+
+#adminTickets .admin-concert-card {
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+
+
+#adminTickets img {
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+
+
+#adminTickets .admin-concert-info {
+
+    padding:20px;
+
+}
+
+
+
+/* DARK MODE */
+
+body.dark #ticketForm {
+
+    background:#222;
+
+}
+
+
+body.dark #ticketForm input,
+body.dark #ticketForm select {
+
+    background:#333;
+
+    color:white;
+
+    border-color:#555;
+
+}
+
+
+body.dark #adminTickets .admin-concert-card {
+
+    background:#222;
+
+    color:white;
+
+}

@@ -126,6 +126,68 @@
     </div>
 
 </section>
+<hr>
+
+<h2 id="ticketFormTitle">Add New Ticket</h2>
+
+<form id="ticketForm">
+
+    <input
+        type="text"
+        id="ticketTitle"
+        placeholder="Concert title"
+        required
+    >
+
+    <input
+        type="date"
+        id="ticketDate"
+        required
+    >
+
+    <input
+        type="text"
+        id="ticketLocation"
+        placeholder="Location"
+        required
+    >
+
+    <input
+        type="text"
+        id="ticketImage"
+        placeholder="Image URL"
+        required
+    >
+
+    <input
+        type="number"
+        id="ticketPrice"
+        placeholder="Price"
+        required
+    >
+
+    <input
+        type="url"
+        id="ticketLink"
+        placeholder="Ticket link"
+        required
+    >
+
+    <select id="ticketStatus" required>
+        <option value="">Choose status</option>
+        <option value="available">Available</option>
+        <option value="ended">Ended</option>
+    </select>
+
+    <button type="submit" id="ticketSubmitButton">
+        Add Ticket
+    </button>
+
+</form>
+
+<p id="ticketMessage"></p>
+
+<div id="adminTickets"></div>
 
 
 <footer>

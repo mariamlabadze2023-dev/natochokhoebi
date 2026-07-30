@@ -784,3 +784,241 @@ function cancelEdit() {
     "";
 
 }
+
+// ===============================
+// LOAD TICKETS
+// ===============================
+
+async function loadTickets() {
+
+    const container =
+        document.getElementById("adminTickets");
+
+
+    if (!container) {
+        return;
+    }
+
+
+    container.innerHTML =
+        "<p>Loading tickets...</p>";
+
+
+    try {
+
+        const tickets =
+            await supabaseRequest(
+                "/rest/v1/tickets?select=*&order=id.desc"
+            );
+
+
+        if (!tickets || tickets.length === 0) {
+
+            container.innerHTML =
+                "<p>No tickets yet.</p>";
+
+            return;
+        }
+
+
+        container.innerHTML = "";
+
+
+        tickets.forEach(ticket => {
+            tickets.forEach(ticket => {
+
+    const card = document.createElement("div");
+
+    card.className = "admin-concert-card";
+
+
+    card.innerHTML = `
+
+        <img
+            src="${ticket.image}"
+            alt="${ticket.title}"
+        >
+
+
+        <div class="admin-concert-info">
+
+            <h3>
+                ${ticket.title}
+            </h3>
+
+
+            <p>
+                📅 ${formatDate(ticket.date)}
+            </p>
+
+
+            <p>
+                📍 ${ticket.location}
+            </p>
+
+
+            <p>
+                💵 ${ticket.price} GEL
+            </p>
+
+
+            <p>
+                Status:
+                <strong>
+                    ${ticket.status}
+                </strong>
+            </p>
+
+
+        </div>
+
+
+    `;
+
+
+    container.appendChild(card);
+
+});
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "admin-concert-card";
+
+
+            card.innerHTML = `
+
+                <img src="${ticket.image}">
+
+                <div class="admin-concert-info">
+
+                    <h3>
+                        ${ticket.title}
+                    </h3>
+
+                    <p>
+                        📅 ${formatDate(ticket.date)}
+                    </p>
+
+                    <p>
+                        📍 ${ticket.location}
+                    </p>
+
+                    <p>
+                        💵 ${ticket.price} GEL
+                    </p>
+
+                    <p>
+                        Status:
+                        <strong>
+                            ${ticket.status}
+                        </strong>
+                    </p>
+
+                </div>
+
+            `;
+
+
+            container.appendChild(card);
+
+        });
+
+
+    } catch(error) {
+
+        console.error(error);
+
+        container.innerHTML =
+        `
+        <p style="color:red">
+            Error loading tickets:
+            ${error.message}
+        </p>
+        `;
+
+    }
+
+}
+
+
+
+const card =
+    document.createElement("div");
+
+
+card.className =
+    "admin-concert-card";
+
+
+card.innerHTML = `
+
+    <img
+        src="${ticket.image}"
+        alt="${ticket.title}"
+    >
+
+
+    <div class="admin-concert-info">
+
+        <h3>
+            ${ticket.title}
+        </h3>
+
+
+        <p>
+            📅 ${formatDate(ticket.date)}
+        </p>
+
+
+        <p>
+            📍 ${ticket.location}
+        </p>
+
+
+        <p>
+            💵 ${ticket.price} GEL
+        </p>
+
+
+        <p>
+            🎟️ 
+            <a href="${ticket.link}" target="_blank">
+                Ticket Link
+            </a>
+        </p>
+
+
+        <p>
+            Status:
+            <strong>
+                ${ticket.status}
+            </strong>
+        </p>
+
+
+    </div>
+
+
+    <div class="admin-card-buttons">
+
+        <button
+            onclick="editTicket(${ticket.id})"
+            class="edit-btn"
+        >
+            Edit
+        </button>
+
+
+        <button
+            onclick="deleteTicket(${ticket.id})"
+            class="delete-btn"
+        >
+            Delete
+        </button>
+
+    </div>
+
+`;
